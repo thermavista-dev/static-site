@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<!-- TODO:
+  Add web3forms for email submissions for contacts
+  -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <meta
+    name="description"
+    content="ThermaVista provides thermal drone inspections and thermal camera inspections for commissioning and maintenance of solar PV and electrical systems throughout San Diego, Orange, and Riverside Counties."
+  />
+  <meta
+    name="keywords"
+    content="thermal inspection, thermography, drone thermal inspection, solar PV inspection, electrical thermography, infrared inspection, IEC TS 62446-3, ANSI NETA, San Diego, Orange County, Riverside County"
+  />
+  <meta name="author" content="ThermaVista" />
+  <title>ThermaVista | Thermal Inspections for Solar PV & Electrical Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand" aria-label="ThermaVista Home">
+      <div class="brand-mark"></div>
+      <div class="brand-text">
+        <span class="brand-name">ThermaVista</span>
+        <span class="brand-tagline">See More. Keep It Performing.</span>
+      </div>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Thermal Inspection</a></li>
+        <li><a href="#standards">Standards</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#service-area">Service Area</a></li>
+        <li><a href="#contact" class="btn btn-nav" onclick="togglePopup(true)">Request an Inspection</a></li> <!-- https://docs.web3forms.com/getting-started/examples/basic-html-contact-form -->
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">THERMAL INSPECTIONS FOR COMMISSIONING & MAINTENANCE</p>
+        <h1>
+          See Electrical Problems
+          <span>Before They Become Failures.</span>
+        </h1>
+        <p class="hero-text">
+          ThermaVista provides thermal drone inspections and ground-based thermography
+          for solar PV and electrical systems. We help owners, EPCs, and maintenance teams
+          detect anomalies early, verify new installations, and support reliable asset performance.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Request an Inspection</a>
+          <a href="#services" class="btn btn-secondary">Explore Services</a>
+        </div>
+
+        <div class="hero-highlights">
+          <article class="highlight-card">
+            <h3>Reduce Risk</h3>
+            <p>Find developing issues before they become downtime, failures, or warranty disputes.</p>
+          </article>
+          <article class="highlight-card">
+            <h3>Verify Installations</h3>
+            <p>Support commissioning and acceptance with documented thermal findings.</p>
+          </article>
+          <article class="highlight-card">
+            <h3>Protect Performance</h3>
+            <p>Identify PV and electrical anomalies that may impact output, safety, or reliability.</p>
+          </article>
+          <article class="highlight-card">
+            <h3>Trend Over Time</h3>
+            <p>Build a repeatable maintenance record to support long-term asset decisions.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="hero-panel-card">
+          <h2>Serving Southern California</h2>
+          <p>
+            Based in <strong>San Diego North County</strong>, ThermaVista is centrally located to readily serve
+            <strong>San Diego, Orange, and Riverside Counties</strong>.
+          </p>
+          <ul class="check-list">
+            <li>Thermal drone inspections for commercial & utility PV</li>
+            <li>Ground-based infrared inspections for electrical equipment</li>
+            <li>Commissioning support for new installations</li>
+            <li>Periodic maintenance inspections for systems in service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <strong>IEC TS 62446-3</strong>
+        <span>PV thermography methodology</span>
+      </div>
+      <div class="trust-item">
+        <strong>ANSI/NETA Guidelines</strong>
+        <span>Commissioning, acceptance & maintenance support</span>
+      </div>
+      <div class="trust-item">
+        <strong>Drone + Ground Imaging</strong>
+        <span>Faster coverage with actionable evidence</span>
+      </div>
+      <div class="trust-item">
+        <strong>North County Based</strong>
+        <span>Serving San Diego, Orange & Riverside Counties</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">OUR SERVICES</p>
+        <h2>Complete Thermal Inspection Solutions</h2>
+        <p>
+          From commissioning new systems to monitoring assets already in service,
+          ThermaVista provides thermal inspection services designed to surface issues
+          before they affect safety, reliability, or production.
+        </p>
+      </div>
+
+      <div class="card-grid four-up">
+        <article class="service-card">
+          <div class="card-icon">☀️</div>
+          <h3>Solar PV Thermal Inspections</h3>
+          <p>
+            Drone-based and targeted ground-based thermography for commercial and utility
+            photovoltaic systems, including modules, strings, combiners, inverters, and BOS equipment.
+          </p>
+          <a href="#contact" class="text-link">Learn More</a>
+        </article>
+
+        <article class="service-card">
+          <div class="card-icon">⚡</div>
+          <h3>Electrical Thermography</h3>
+          <p>
+            Infrared inspection of electrical equipment such as switchgear, panelboards,
+            disconnects, transformers, inverters, and terminations to identify abnormal heating.
+          </p>
+          <a href="#contact" class="text-link">Learn More</a>
+        </article>
+
+        <article class="service-card">
+          <div class="card-icon">🛠️</div>
+          <h3>Commissioning Inspections</h3>
+          <p>
+            Verify new installations, support punch-list development, and establish a baseline
+            thermal condition before final turnover and long-term operation.
+          </p>
+          <a href="#contact" class="text-link">Learn More</a>
+        </article>
+
+        <article class="service-card">
+          <div class="card-icon">📈</div>
+          <h3>Preventive Maintenance</h3>
+          <p>
+            Periodic inspections help asset owners detect developing conditions early,
+            track changes over time, and prioritize maintenance resources intelligently.
+          </p>
+          <a href="#contact" class="text-link">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">WHY THERMAL INSPECTION</p>
+        <h2>Problems Aren’t Always Visible. Heat Tells the Real Story.</h2>
+        <p>
+          Many electrical and photovoltaic defects appear ordinary in visible light
+          while showing meaningful thermal signatures under operating conditions.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="image-panel visible-image">
+          <div class="image-label">Visible Image</div>
+        </div>
+
+        <div class="image-panel thermal-image">
+          <div class="image-label">Thermal Image</div>
+        </div>
+
+        <article class="finding-card">
+          <h3>Example: Module Hotspot</h3>
+          <p>
+            A PV module may look normal in visible light while the thermal image reveals
+            a hotspot consistent with a developing defect such as a cell issue, connection
+            problem, or other abnormal operating condition.
+          </p>
+
+          <div class="finding-metrics">
+            <div class="metric">
+              <span class="metric-value">18.4°C</span>
+              <span class="metric-label">Example ΔT</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">P2</span>
+              <span class="metric-label">Example Priority</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">Action</span>
+              <span class="metric-label">Investigate Further</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">VALUE ADD</p>
+        <h2>Why Owners, EPCs, and Maintenance Teams Use Thermal Inspections</h2>
+      </div>
+
+      <div class="card-grid three-up">
+        <article class="value-card">
+          <h3>Reduce Unplanned Downtime</h3>
+          <p>
+            Identify abnormal heating before it leads to major equipment failure,
+            service interruption, or expensive emergency repair.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3>Support Commissioning Quality</h3>
+          <p>
+            New systems can energize and still contain issues. Thermal inspection helps
+            verify installation quality under operating conditions.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3>Improve Maintenance Prioritization</h3>
+          <p>
+            Documented findings help maintenance teams focus effort on the components
+            most likely to need follow-up.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3>Protect PV Performance</h3>
+          <p>
+            Thermal anomalies can indicate module, string, or connection issues that may
+            quietly reduce energy production.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3>Support Warranty & Documentation</h3>
+          <p>
+            Paired thermal and visual evidence helps create a defensible record of asset
+            condition during commissioning and maintenance.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3>Establish a Historical Baseline</h3>
+          <p>
+            Repeat inspections create trend data that can help reveal deterioration over
+            time rather than relying on guesswork.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STANDARDS -->
+  <section id="standards" class="section section-dark">
+    <div class="container">
+      <div class="section-heading section-heading-light">
+        <p class="eyebrow">STANDARDS-ALIGNED INSPECTIONS</p>
+        <h2>Trusted Guidelines. Reliable Results.</h2>
+        <p>
+          ThermaVista performs thermal inspections using structured methods informed by
+          recognized photovoltaic and electrical inspection guidelines.
+        </p>
+      </div>
+
+      <div class="standards-grid">
+        <article class="standard-card">
+          <h3>IEC TS 62446-3</h3>
+          <p>
+            A technical specification addressing outdoor infrared thermography of operating
+            PV modules and plants, including procedures, reporting, environmental considerations,
+            equipment, and evaluation of thermal abnormalities.
+          </p>
+        </article>
+
+        <article class="standard-card">
+          <h3>ANSI/NETA ECS</h3>
+          <p>
+            Commissioning guidance for newly installed and retrofitted electrical systems,
+            supporting verification that systems satisfy project requirements.
+          </p>
+        </article>
+
+        <article class="standard-card">
+          <h3>ANSI/NETA ATS</h3>
+          <p>
+            Acceptance testing guidance for verifying equipment condition and installation
+            prior to final acceptance and operation.
+          </p>
+        </article>
+
+        <article class="standard-card">
+          <h3>ANSI/NETA MTS</h3>
+          <p>
+            Maintenance testing guidance for electrical equipment already in service, helping
+            assess condition, suitability, and reliability over time.
+          </p>
+        </article>
+      </div>
+
+      <div class="standards-note">
+        <p>
+          <strong>Important note:</strong> ThermaVista’s website language should describe
+          its work as <em>aligned with</em> or <em>informed by</em> applicable guidelines,
+          unless a specific certification or accreditation is formally held and represented.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">OUR PROCESS</p>
+        <h2>From Inspection to Actionable Findings</h2>
+        <p>
+          ThermaVista’s process is designed to move from field data collection to clear,
+          organized, useful reporting—because a thermogram is only valuable if it leads to action.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-step">
+          <span class="step-number">1</span>
+          <h3>Plan</h3>
+          <p>Review drawings, asset information, site access, and inspection scope.</p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">2</span>
+          <h3>Verify Conditions</h3>
+          <p>Confirm operating and environmental conditions suitable for inspection.</p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">3</span>
+          <h3>Capture Data</h3>
+          <p>Collect thermal and visual imagery using drone and/or handheld equipment.</p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">4</span>
+          <h3>Analyze</h3>
+          <p>Evaluate thermal patterns, temperature differences, and probable anomalies.</p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">5</span>
+          <h3>Report Findings</h3>
+          <p>Document findings with paired imagery, location, severity, and notes.</p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">6</span>
+          <h3>Support Follow-Up</h3>
+          <p>Help clients prioritize further investigation, repair, or trending over time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="section section-alt">
+    <div class="container deliverables-grid">
+      <div>
+        <p class="eyebrow">DELIVERABLES</p>
+        <h2>What Clients Receive</h2>
+        <p>
+          A professional thermal inspection should end with documentation that is useful,
+          not decorative. ThermaVista reports are designed to help decision-makers act.
+        </p>
+      </div>
+
+      <div class="deliverables-card">
+        <ul class="check-list">
+          <li>Inspection scope and methodology</li>
+          <li>Site and equipment identification</li>
+          <li>Thermal and visible images</li>
+          <li>Environmental and operating conditions</li>
+          <li>Temperature measurements and ΔT observations</li>
+          <li>Anomaly summaries and finding descriptions</li>
+          <li>Priority or follow-up recommendations</li>
+          <li>Baseline documentation for future comparison</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section id="service-area" class="section service-area">
+    <div class="container service-area-grid">
+      <div>
+        <p class="eyebrow">LOCAL EXPERTISE</p>
+        <h2>Proudly Serving Southern California</h2>
+        <p>
+          ThermaVista is based in North County and provides thermal inspection services
+          throughout the Southern California region.
+        </p>
+        <ul class="service-area-list">
+          <li><strong>San Diego County</strong> — commercial facilities, solar carports, rooftops, utility-scale support</li>
+          <li><strong>Orange County</strong> — electrical and photovoltaic inspection support</li>
+          <li><strong>Riverside County</strong> — thermal drone and ground-based inspection services</li>
+        </ul>
+      </div>
+
+      <div class="map-card">
+        <div class="map-placeholder">
+          <div class="map-region sd">San Diego County</div>
+          <div class="map-region oc">Orange County</div>
+          <div class="map-region rc">Riverside County</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-card">
+      <div>
+        <p class="eyebrow">READY TO TALK?</p>
+        <h2>Request a Thermal Inspection</h2>
+        <p>
+          Whether you need commissioning support for a new installation or periodic
+          thermal maintenance for an operating system, ThermaVista can help.
+        </p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Start Your Request</a>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>ThermaVista</h3>
+      <p>
+        Thermal drone inspections and infrared thermography for solar PV and
+        electrical systems across Southern California.
+      </p>
+    </div>
+
+    <div>
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Solar PV Thermal Inspections</a></li>
+        <li><a href="#services">Electrical Thermography</a></li>
+        <li><a href="#services">Commissioning Inspections</a></li>
+        <li><a href="#services">Preventive Maintenance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Service Area</h4>
+      <ul class="footer-links">
+        <li>North County</li>
+        <li>San Diego County</li>
+        <li>Orange County</li>
+        <li>Riverside County</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+17607607220">(760) 760-7220</a></li>
+        <li><a href="mailto:sales@thermavista.com">sales@thermavista.com</a></li>
+        <li>Mon–Fri | 8:00 AM – 5:00 PM</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 ThermaVista. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Popup Modal Overlay -->
+<div id="contactModal" class="modal-overlay">
+  <div class="modal-content">
+    <!-- Close Button -->
+    <span class="close-btn" onclick="togglePopup(false)">&times;</span>
+
+    <h2>Get in Touch</h2>
+    <p>Fill out the form below and we will get back to you shortly.</p>
+
+    <!-- Contact Form -->
+    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" required placeholder="Your Name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="your.email@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required placeholder="How can we help?"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>
