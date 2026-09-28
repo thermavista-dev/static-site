@@ -182,7 +182,7 @@ ul {
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: url("./img/tv_logo.png") center/cover no-repeat;
+  background: url("../img/tv_logo.png") center/cover no-repeat;
 
   /*background: linear-gradient(135deg, var(--color-navy), var(--color-teal));*/
   /*color: var(--color-white);*/
