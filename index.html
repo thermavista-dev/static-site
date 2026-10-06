@@ -26,7 +26,8 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+
   <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
   <link rel="shortcut icon" href="./img/favicon.ico" />
@@ -58,7 +59,7 @@
         <li><a href="#standards">Standards</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#service-area">Service Area</a></li>
-        <li><a href="#contact" class="btn btn-nav" onclick="togglePopup(true)">Request an Inspection</a></li> <!-- https://docs.web3forms.com/getting-started/examples/basic-html-contact-form -->
+        <li><a class="btn btn-nav contact-btn">Request an Inspection</a></li>
       </ul>
     </nav>
   </div>
@@ -82,7 +83,7 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Request an Inspection</a>
+          <a href="#contact" class="btn btn-primary contact-btn">Request an Inspection</a>
           <a href="#services" class="btn btn-secondary">Explore Services</a>
         </div>
 
@@ -478,9 +479,55 @@
           thermal maintenance for an operating system, ThermaVista can help.
         </p>
       </div>
-      <a href="#contact" class="btn btn-primary">Start Your Request</a>
+      <a href="#contact" class="btn btn-primary contact-btn">Request an Inspection</a>
     </div>
   </section>
+
+  <!-- Popup Modal Overlay -->
+  <div id="contactModal" class="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="contact-modal__backdrop" data-close-modal></div>
+
+    <div class="contact-modal__dialog">
+      <button type="button" class="contact-modal__close" aria-label="Close contact form" data-close-modal>×</button>
+
+      <h2 id="contactModalTitle">Contact Us</h2>
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="d277d345-957e-4268-8b7b-366514b97cec"/>
+        <input type="hidden" name="subject" value="New ThermaVista Website Contact"/>
+        <input type="hidden" name="from_name" value="ThermaVista Website"/>
+
+
+        <div class="contact-honeypot" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="botcheck" type="text" tabindex="-1" autocomplete="off"/>
+        </div>
+        <div>
+          <label for="contactName">Name</label>
+          <input id="contactName" name="name" type="text" required/>
+        </div>
+
+        <div>
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" name="email" type="email" required/>
+        </div>
+
+        <div>
+          <label for="contactPhone">Phone</label>
+          <input id="contactPhone" name="phone" type="tel"/>
+        </div>
+
+        <div>
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="5" required ></textarea>
+        </div>
+
+        <div id="contactStatus" aria-live="polite"></div>
+
+        <button id="contactSubmitButton" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
 </main>
 
 <footer id="contact" class="site-footer">
@@ -527,37 +574,103 @@
   </div>
 </footer>
 
-<!-- Popup Modal Overlay -->
-<div id="contactModal" class="modal-overlay">
-  <div class="modal-content">
-    <!-- Close Button -->
-    <span class="close-btn" onclick="togglePopup(false)">&times;</span>
 
-    <h2>Get in Touch</h2>
-    <p>Fill out the form below and we will get back to you shortly.</p>
+<script>
 
-    <!-- Contact Form -->
-    <form id="contactForm" onsubmit="handleFormSubmit(event)">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" required placeholder="Your Name">
-      </div>
+  (() => {
+    const modal = document.getElementById("contactModal");
+    const closeButtons = modal.querySelectorAll("[data-close-modal]");
+    const form = document.getElementById("contactForm");
+    const submitButton = document.getElementById("contactSubmitButton");
+    const status = document.getElementById("contactStatus");
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" required placeholder="your.email@example.com">
-      </div>
+    const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="4" required placeholder="How can we help?"></textarea>
-      </div>
+    const openModal = () => {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
 
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-  </div>
-</div>
+      document.body.style.overflow = "hidden";
 
+      document.getElementById("contactName").focus();
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+
+      status.textContent = "";
+    };
+
+    document.querySelectorAll('.contact-btn').forEach(item => {
+      item.addEventListener('click', e => openModal())
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener("click", closeModal);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+      status.textContent = "";
+
+      try {
+        const formData = new FormData(form);
+        const botCheck = formData.get("botcheck").value;
+        if (botCheck && botCheck.trim() !== "") {
+          console.warn("Spam submission blocked.");
+          return;
+        }
+
+        const response = await fetch(WEB3FORMS_URL, {
+          method: "POST",
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(
+            result.message || "Unable to send message."
+          );
+        }
+
+        form.reset();
+
+        status.textContent = "Message sent successfully.";
+
+        setTimeout(() => {
+          closeModal();
+        }, 500);
+
+      } catch (error) {
+        console.error(error);
+
+        status.textContent =
+          "There was a problem sending your message. Please try again or give us a call.";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
+      }
+    });
+  })();
+
+</script>
 
 </body>
 </html>

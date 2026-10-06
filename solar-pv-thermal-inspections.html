@@ -1,0 +1,2872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="ThermaVista provides aerial and ground-based thermal inspections for commercial and utility-scale solar PV systems throughout San Diego, Orange, and Riverside Counties. IEC TS 62446-3 aligned inspection methodology for commissioning and periodic maintenance."
+  />
+
+  <meta
+    name="keywords"
+    content="solar thermal inspection, PV thermal inspection, drone thermal inspection, solar drone inspection, infrared solar inspection, photovoltaic thermography, IEC TS 62446-3, solar commissioning inspection, solar maintenance inspection, San Diego solar inspection, Orange County solar inspection, Riverside solar inspection"
+  />
+
+  <meta name="author" content="ThermaVista" />
+
+  <title>
+    Solar PV Thermal Inspections | Drone Thermography | ThermaVista
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+  <link rel="shortcut icon" href="./img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+
+
+  <style>
+    /*
+     * Page-specific styles.
+     *
+     * These can remain here during development or be moved into styles.css.
+     */
+
+    .service-hero {
+      position: relative;
+      overflow: hidden;
+      color: #ffffff;
+      padding: 6rem 0 5rem;
+      background:
+        linear-gradient(
+          110deg,
+          rgba(8, 24, 42, 0.94) 0%,
+          rgba(14, 39, 71, 0.88) 48%,
+          rgba(14, 39, 71, 0.48) 100%
+        ),
+        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+    }
+
+    .service-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .service-hero-copy h1 {
+      margin: 0.4rem 0 1.2rem;
+      max-width: 850px;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .service-hero-copy h1 span {
+      color: var(--color-orange);
+    }
+
+    .service-hero-copy > p:not(.eyebrow) {
+      max-width: 760px;
+      margin-bottom: 1.7rem;
+      font-size: 1.12rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .service-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .service-hero-badge {
+      padding: 0.55rem 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.23);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.09);
+      color: #ffffff;
+      font-size: 0.87rem;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-spec-card {
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.93);
+      color: var(--color-text);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-spec-card h2 {
+      margin: 0 0 1rem;
+      color: var(--color-navy);
+      font-size: 1.55rem;
+    }
+
+    .hero-spec-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-spec-list li {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 0.7rem;
+      padding: 0.72rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-spec-list li:last-child {
+      border-bottom: none;
+    }
+
+    .hero-spec-icon {
+      color: var(--color-orange);
+      font-weight: 800;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .intro-copy h2 {
+      margin-top: 0.35rem;
+      margin-bottom: 1rem;
+      color: var(--color-navy);
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .intro-copy p {
+      color: var(--color-text-soft);
+      font-size: 1.03rem;
+    }
+
+    .thermal-demo {
+      min-height: 430px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .thermal-demo-panel {
+      position: relative;
+      min-height: 430px;
+    }
+
+    .thermal-demo-visible {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.08)),
+        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85")
+        center / cover no-repeat;
+    }
+
+    .thermal-demo-ir {
+      background:
+        radial-gradient(
+          circle at 67% 42%,
+          #fff668 0%,
+          #ffbb22 5%,
+          #ff6b00 13%,
+          #ff245c 24%,
+          #aa24ba 43%,
+          #4d278e 65%,
+          #17113c 100%
+        );
+    }
+
+    .thermal-demo-label {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(8, 24, 42, 0.82);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .use-case-card {
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .use-case-card h3 {
+      margin: 0 0 0.7rem;
+      color: var(--color-navy);
+      font-size: 1.08rem;
+    }
+
+    .use-case-card p {
+      margin: 0;
+      color: var(--color-text-soft);
+      font-size: 0.95rem;
+    }
+
+    .defect-table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .defect-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 800px;
+      background: #ffffff;
+    }
+
+    .defect-table th,
+    .defect-table td {
+      padding: 1rem 1.1rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .defect-table th {
+      background: var(--color-navy);
+      color: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    .defect-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .defect-table td:first-child {
+      color: var(--color-navy);
+      font-weight: 700;
+    }
+
+    .methodology-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+
+    .methodology-card {
+      padding: 1.6rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--color-text);
+    }
+
+    .methodology-number {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      background: var(--color-orange);
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .methodology-card h3 {
+      margin: 0 0 0.65rem;
+      color: var(--color-navy);
+    }
+
+    .methodology-card p {
+      margin: 0;
+      color: var(--color-text-soft);
+    }
+
+    .condition-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .condition-card {
+      padding: 1.3rem;
+      border-left: 4px solid var(--color-orange);
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .condition-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--color-navy);
+    }
+
+    .condition-card span {
+      color: var(--color-text-soft);
+      font-size: 0.94rem;
+    }
+
+    .standards-feature {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .standard-callout {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          135deg,
+          var(--color-navy),
+          var(--color-navy-2)
+        );
+      color: #ffffff;
+      box-shadow: var(--shadow-card);
+    }
+
+    .standard-callout .standard-code {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: var(--color-orange);
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .standard-callout h3 {
+      margin: 0 0 1rem;
+      font-size: 1.7rem;
+    }
+
+    .standard-callout p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .standards-detail h2 {
+      margin-top: 0;
+      color: var(--color-navy);
+    }
+
+    .standards-detail p {
+      color: var(--color-text-soft);
+    }
+
+    .standards-detail ul {
+      padding-left: 1.3rem;
+      color: var(--color-text-soft);
+    }
+
+    .standards-detail li {
+      margin-bottom: 0.65rem;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .timeline-step {
+      position: relative;
+      padding: 1.6rem 1.3rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .timeline-step::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -0.8rem;
+      transform: translateY(-50%);
+      z-index: 2;
+      color: var(--color-orange);
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .timeline-step:last-child::after {
+      display: none;
+    }
+
+    .timeline-step strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--color-navy);
+    }
+
+    .timeline-step p {
+      margin: 0;
+      color: var(--color-text-soft);
+      font-size: 0.92rem;
+    }
+
+    .report-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .report-example {
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #ffffff;
+      box-shadow: var(--shadow-card);
+    }
+
+    .report-header {
+      padding: 1.1rem 1.3rem;
+      background: var(--color-navy);
+      color: #ffffff;
+    }
+
+    .report-header strong {
+      display: block;
+      font-size: 1.1rem;
+    }
+
+    .report-header span {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .report-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .report-image {
+      min-height: 160px;
+      position: relative;
+    }
+
+    .report-visible {
+      background:
+        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80")
+        center / cover no-repeat;
+    }
+
+    .report-thermal {
+      background:
+        radial-gradient(
+          circle at 60% 40%,
+          #fff765,
+          #ff851b 14%,
+          #e92a73 30%,
+          #752396 55%,
+          #26104f 100%
+        );
+    }
+
+    .report-body {
+      padding: 1.3rem;
+    }
+
+    .report-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.9rem;
+    }
+
+    .report-row:last-child {
+      border-bottom: none;
+    }
+
+    .report-row span {
+      color: var(--color-text-soft);
+    }
+
+    .report-row strong {
+      color: var(--color-navy);
+      text-align: right;
+    }
+
+    .inspection-packages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+
+    .package-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .package-card.featured {
+      border: 2px solid var(--color-orange);
+      transform: translateY(-6px);
+    }
+
+    .package-label {
+      position: absolute;
+      top: 0;
+      right: 1.5rem;
+      transform: translateY(-50%);
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: var(--color-orange);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .package-card h3 {
+      margin-top: 0;
+      color: var(--color-navy);
+      font-size: 1.4rem;
+    }
+
+    .package-card > p {
+      color: var(--color-text-soft);
+    }
+
+    .package-card ul {
+      flex-grow: 1;
+      padding-left: 1.2rem;
+      color: var(--color-text-soft);
+    }
+
+    .package-card li {
+      margin-bottom: 0.55rem;
+    }
+
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 1.2rem 1.4rem;
+      color: var(--color-navy);
+      font-weight: 700;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      float: right;
+      color: var(--color-orange);
+      font-size: 1.3rem;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 1.4rem 1.25rem;
+      color: var(--color-text-soft);
+    }
+
+    .faq-answer p {
+      margin-top: 0;
+    }
+
+    .bottom-cta {
+      background:
+        linear-gradient(
+          110deg,
+          rgba(10, 28, 48, 0.96),
+          rgba(19, 60, 89, 0.92)
+        );
+      color: #ffffff;
+    }
+
+    .bottom-cta-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .bottom-cta h2 {
+      margin: 0.4rem 0 0.7rem;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .bottom-cta p {
+      max-width: 720px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 1050px) {
+      .service-hero-grid,
+      .intro-grid,
+      .standards-feature,
+      .report-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .use-case-grid,
+      .condition-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .methodology-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-step::after {
+        content: "↓";
+        top: auto;
+        bottom: -1.15rem;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      .inspection-packages {
+        grid-template-columns: 1fr;
+      }
+
+      .package-card.featured {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .service-hero {
+        padding: 4.5rem 0 3.5rem;
+      }
+
+      .use-case-grid,
+      .condition-grid,
+      .methodology-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .thermal-demo {
+        grid-template-columns: 1fr;
+      }
+
+      .thermal-demo-panel {
+        min-height: 280px;
+      }
+
+      .bottom-cta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand" aria-label="ThermaVista home">
+
+      <div class="brand-mark"></div>
+
+      <div class="brand-text">
+        <span class="brand-name">ThermaVista</span>
+        <span class="brand-tagline">
+            See More. Keep It Performing.
+          </span>
+      </div>
+
+    </a>
+
+
+    <input
+      type="checkbox"
+      id="nav-toggle"
+      class="nav-toggle"
+    />
+
+    <label
+      for="nav-toggle"
+      class="nav-toggle-label"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+
+    <nav class="site-nav" aria-label="Primary navigation">
+
+      <ul>
+
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="solar-pv-thermal-inspections.html">
+            Solar PV
+          </a>
+        </li>
+
+        <li>
+          <a href="electrical-thermography.html">
+            Electrical
+          </a>
+        </li>
+
+        <li>
+          <a href="commissioning-inspections.html">
+            Commissioning
+          </a>
+        </li>
+
+        <li>
+          <a href="standards.html">
+            Standards
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" class="btn btn-nav">
+            Request an Inspection
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+</header>
+
+
+
+<main>
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+
+  <section class="service-hero">
+
+    <div class="container service-hero-grid">
+
+      <div class="service-hero-copy">
+
+        <p class="eyebrow">
+          SOLAR PV THERMAL INSPECTIONS
+        </p>
+
+        <h1>
+          Find Solar Problems
+          <span>That Can't Be Seen From the Ground.</span>
+        </h1>
+
+        <p>
+          ThermaVista provides aerial and ground-based infrared
+          thermography for commercial and utility photovoltaic systems,
+          helping owners, EPC contractors, commissioning teams, and O&amp;M
+          providers identify thermal anomalies quickly and document
+          system condition with actionable evidence.
+        </p>
+
+
+        <div class="service-hero-badges">
+
+            <span class="service-hero-badge">
+              IEC TS 62446-3 Aligned
+            </span>
+
+          <span class="service-hero-badge">
+              Radiometric Thermal Imaging
+            </span>
+
+          <span class="service-hero-badge">
+              Commissioning &amp; Maintenance
+            </span>
+
+          <span class="service-hero-badge">
+              Southern California
+            </span>
+
+        </div>
+
+
+        <div class="hero-actions">
+
+          <a href="#contact" class="btn btn-primary">
+            Request an Inspection
+          </a>
+
+          <a href="#inspection-process" class="btn btn-secondary">
+            See How It Works
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <aside class="hero-spec-card">
+
+        <h2>
+          Typical Inspection Scope
+        </h2>
+
+        <ul class="hero-spec-list">
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                PV module and cell-level thermal anomalies
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                String and substring abnormalities
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Connector and junction-box heating
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Combiner box inspection
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Inverter thermal inspection
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Disconnects and electrical terminations
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Commissioning baseline documentation
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Periodic condition monitoring
+              </span>
+          </li>
+
+        </ul>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       TRUST BAR
+       ========================================================= -->
+
+  <section class="trust-bar">
+
+    <div class="container trust-grid">
+
+      <div class="trust-item">
+        <strong>IEC TS 62446-3</strong>
+        <span>
+            PV thermography methodology
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Radiometric Imaging</strong>
+        <span>
+            Temperature data, not merely photographs
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Drone + Ground</strong>
+        <span>
+            Array coverage plus electrical detail
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>SoCal Coverage</strong>
+        <span>
+            San Diego, Orange &amp; Riverside
+          </span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       INTRODUCTION
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container intro-grid">
+
+      <div class="intro-copy">
+
+        <p class="eyebrow">
+          SEE WHAT NORMAL IMAGERY MISSES
+        </p>
+
+        <h2>
+          A Solar Module Can Look Normal and Still Have a Problem
+        </h2>
+
+        <p>
+          Many photovoltaic defects are difficult or impossible to identify
+          through conventional visual inspection alone. Under appropriate
+          operating conditions, defective cells, electrical connections,
+          bypass components, and other abnormalities can produce distinct
+          thermal patterns.
+        </p>
+
+        <p>
+          Radiometric infrared imaging allows those temperature differences
+          to be measured, mapped, and compared across large PV installations.
+          Drone-based inspection makes that process practical even across
+          hundreds or thousands of modules.
+        </p>
+
+        <p>
+          ThermaVista combines aerial imaging with targeted ground
+          thermography to provide both broad system coverage and detailed
+          inspection of electrical equipment.
+        </p>
+
+      </div>
+
+
+      <div
+        class="thermal-demo"
+        aria-label="Example visible and thermal comparison"
+      >
+
+        <div class="thermal-demo-panel thermal-demo-visible">
+            <span class="thermal-demo-label">
+              Visible Image
+            </span>
+        </div>
+
+        <div class="thermal-demo-panel thermal-demo-ir">
+            <span class="thermal-demo-label">
+              Thermal Image
+            </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       USE CASES
+       ========================================================= -->
+
+  <section class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          WHEN TO USE THERMAL INSPECTION
+        </p>
+
+        <h2>
+          One Technology. Several Different Inspection Objectives.
+        </h2>
+
+        <p>
+          The inspection strategy depends on where the PV system is in its
+          lifecycle and what decision the inspection needs to support.
+        </p>
+
+      </div>
+
+
+      <div class="use-case-grid">
+
+        <article class="use-case-card">
+
+          <h3>
+            New System Commissioning
+          </h3>
+
+          <p>
+            Inspect an energized installation prior to turnover to identify
+            thermal anomalies and establish initial system condition.
+          </p>
+
+        </article>
+
+
+        <article class="use-case-card">
+
+          <h3>
+            Acceptance Support
+          </h3>
+
+          <p>
+            Provide thermal evidence that can support project punch lists,
+            quality assurance, corrective work, and final acceptance.
+          </p>
+
+        </article>
+
+
+        <article class="use-case-card">
+
+          <h3>
+            Periodic Maintenance
+          </h3>
+
+          <p>
+            Inspect operating systems at regular intervals to identify new
+            abnormalities before they develop into larger problems.
+          </p>
+
+        </article>
+
+
+        <article class="use-case-card">
+
+          <h3>
+            Troubleshooting
+          </h3>
+
+          <p>
+            Use targeted thermal inspection to help localize suspected
+            production, module, string, connector, or electrical issues.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       WHAT WE DETECT
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          WHAT THERMAL IMAGING CAN REVEAL
+        </p>
+
+        <h2>
+          Thermal Patterns Provide Clues About System Condition
+        </h2>
+
+        <p>
+          Infrared thermography identifies abnormal thermal behavior.
+          The resulting patterns can help direct electrical testing,
+          troubleshooting, maintenance, and corrective action.
+        </p>
+
+      </div>
+
+
+      <div class="defect-table-wrapper">
+
+        <table class="defect-table">
+
+          <thead>
+
+          <tr>
+
+            <th>
+              Thermal Observation
+            </th>
+
+            <th>
+              Possible Condition
+            </th>
+
+            <th>
+              Why It Matters
+            </th>
+
+            <th>
+              Typical Follow-Up
+            </th>
+
+          </tr>
+
+          </thead>
+
+
+          <tbody>
+
+          <tr>
+
+            <td>
+              Individual hot cell
+            </td>
+
+            <td>
+              Cell damage, mismatch, cracking, localized shading,
+              or other module abnormality
+            </td>
+
+            <td>
+              May affect module performance and could indicate a
+              developing failure mechanism
+            </td>
+
+            <td>
+              Visual inspection, electrical testing, module evaluation
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Substring heating
+            </td>
+
+            <td>
+              Bypass diode or substring-related condition
+            </td>
+
+            <td>
+              May indicate reduced module output or abnormal current flow
+            </td>
+
+            <td>
+              Electrical evaluation and module troubleshooting
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Entire module warmer than adjacent modules
+            </td>
+
+            <td>
+              Open circuit, wiring issue, operating mismatch,
+              or module-level electrical condition
+            </td>
+
+            <td>
+              May indicate loss of production or abnormal module operation
+            </td>
+
+            <td>
+              String-level electrical testing and inspection
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Connector hotspot
+            </td>
+
+            <td>
+              Increased resistance, poor contact, contamination,
+              improper assembly, or connection degradation
+            </td>
+
+            <td>
+              Resistive heating may increase over time and warrants
+              investigation
+            </td>
+
+            <td>
+              Qualified electrical inspection and corrective evaluation
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Junction-box heating
+            </td>
+
+            <td>
+              Internal connection, diode, or component abnormality
+            </td>
+
+            <td>
+              May indicate an electrical issue not visible externally
+            </td>
+
+            <td>
+              Targeted inspection and electrical diagnostics
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              String-level thermal difference
+            </td>
+
+            <td>
+              Current imbalance, open string, shading, mismatch,
+              or electrical fault
+            </td>
+
+            <td>
+              May correspond with reduced production from an affected string
+            </td>
+
+            <td>
+              String current and voltage testing
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Combiner or fuse heating
+            </td>
+
+            <td>
+              Resistive connection, fuse condition, imbalance,
+              or conductor issue
+            </td>
+
+            <td>
+              Could affect reliability and electrical-system performance
+            </td>
+
+            <td>
+              Ground-based thermography and qualified electrical evaluation
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Inverter termination hotspot
+            </td>
+
+            <td>
+              Abnormal resistance at a conductor or terminal connection
+            </td>
+
+            <td>
+              High-current connections can produce significant heating
+              when resistance increases
+            </td>
+
+            <td>
+              Qualified electrician investigation and corrective action
+            </td>
+
+          </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <p
+        style="
+            margin-top: 1rem;
+            color: var(--color-text-soft);
+            font-size: 0.88rem;
+          "
+      >
+        Thermal signatures identify abnormal temperature patterns and
+        potential conditions; they do not necessarily establish root cause
+        without appropriate follow-up evaluation.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       IEC METHODOLOGY
+       ========================================================= -->
+
+  <section
+    id="inspection-process"
+    class="section section-dark"
+  >
+
+    <div class="container">
+
+      <div class="section-heading section-heading-light">
+
+        <p class="eyebrow">
+          STANDARDS-ALIGNED DATA COLLECTION
+        </p>
+
+        <h2>
+          A Reliable Thermal Inspection Requires More Than Flying a Drone
+        </h2>
+
+        <p>
+          Thermal data is influenced by system load, sunlight, wind,
+          weather, viewing geometry, equipment characteristics, and
+          inspection technique. ThermaVista evaluates those conditions
+          before relying on the resulting imagery.
+        </p>
+
+      </div>
+
+
+      <div class="methodology-grid">
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">
+            1
+          </div>
+
+          <h3>
+            Verify System Operation
+          </h3>
+
+          <p>
+            Determine whether the PV system is operating under conditions
+            appropriate for meaningful thermal evaluation.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">
+            2
+          </div>
+
+          <h3>
+            Evaluate Environmental Conditions
+          </h3>
+
+          <p>
+            Solar irradiance, cloud cover, wind, ambient temperature, and
+            changing weather conditions are considered before and during
+            data acquisition.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">
+            3
+          </div>
+
+          <h3>
+            Acquire Radiometric Imagery
+          </h3>
+
+          <p>
+            Infrared images retain temperature measurement information,
+            allowing anomalies and temperature differences to be analyzed
+            after acquisition.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">
+            4
+          </div>
+
+          <h3>
+            Capture Visual Context
+          </h3>
+
+          <p>
+            Visible-light imagery helps identify the physical location of
+            findings and distinguish thermal effects caused by shading,
+            contamination, or physical conditions.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">
+            5
+          </div>
+
+          <h3>
+            Analyze Thermal Patterns
+          </h3>
+
+          <p>
+            Findings are evaluated using temperature differences, pattern
+            characteristics, surrounding equipment, and comparable assets.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">
+            6
+          </div>
+
+          <h3>
+            Document Findings
+          </h3>
+
+          <p>
+            Each relevant finding is associated with imagery, equipment
+            identification, location, observations, and recommended follow-up.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       ENVIRONMENTAL CONDITIONS
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          INSPECTION CONDITIONS MATTER
+        </p>
+
+        <h2>
+          Thermal Data Is Only as Good as the Conditions Under Which It Was Collected
+        </h2>
+
+        <p>
+          PV thermal inspection depends upon meaningful electrical loading
+          and sufficiently stable environmental conditions. These factors
+          are evaluated and documented as part of the inspection.
+        </p>
+
+      </div>
+
+
+      <div class="condition-grid">
+
+        <article class="condition-card">
+
+          <strong>
+            Solar Irradiance
+          </strong>
+
+          <span>
+              Adequate and reasonably stable sunlight is necessary to create
+              useful thermal contrast across operating PV modules.
+            </span>
+
+        </article>
+
+
+        <article class="condition-card">
+
+          <strong>
+            Wind
+          </strong>
+
+          <span>
+              Excessive airflow can cool modules and electrical components,
+              reducing or altering observable temperature differences.
+            </span>
+
+        </article>
+
+
+        <article class="condition-card">
+
+          <strong>
+            Cloud Cover
+          </strong>
+
+          <span>
+              Rapid changes in irradiance can create transient temperature
+              patterns that complicate interpretation.
+            </span>
+
+        </article>
+
+
+        <article class="condition-card">
+
+          <strong>
+            System Load
+          </strong>
+
+          <span>
+              Electrical abnormalities are more readily observed when the
+              equipment is operating under meaningful load.
+            </span>
+
+        </article>
+
+
+        <article class="condition-card">
+
+          <strong>
+            Viewing Angle
+          </strong>
+
+          <span>
+              Inspection geometry must limit reflections and provide sufficient
+              image detail for reliable interpretation.
+            </span>
+
+        </article>
+
+
+        <article class="condition-card">
+
+          <strong>
+            Spatial Resolution
+          </strong>
+
+          <span>
+              Flight altitude, optics, sensor resolution, and target size
+              determine how much module-level detail can be resolved.
+            </span>
+
+        </article>
+
+
+        <article class="condition-card">
+
+          <strong>
+            Surface Effects
+          </strong>
+
+          <span>
+              Soiling, shadows, vegetation, moisture, and reflections can
+              produce thermal patterns that require contextual interpretation.
+            </span>
+
+        </article>
+
+
+        <article class="condition-card">
+
+          <strong>
+            Documentation
+          </strong>
+
+          <span>
+              Environmental and operating conditions provide essential context
+              for interpreting the resulting thermographic data.
+            </span>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       IEC STANDARD
+       ========================================================= -->
+
+  <section class="section section-alt">
+
+    <div class="container standards-feature">
+
+      <aside class="standard-callout">
+
+          <span class="standard-code">
+            IEC TS 62446-3
+          </span>
+
+        <h3>
+          Photovoltaic Systems — Outdoor Infrared Thermography
+        </h3>
+
+        <p>
+          ThermaVista's PV inspection methodology is aligned with applicable
+          principles and practices described in IEC TS 62446-3 for outdoor
+          infrared thermography of photovoltaic modules and plants.
+        </p>
+
+      </aside>
+
+
+      <div class="standards-detail">
+
+        <p class="eyebrow">
+          WHY THE STANDARD MATTERS
+        </p>
+
+        <h2>
+          Consistent Procedures Produce More Defensible Results
+        </h2>
+
+        <p>
+          IEC TS 62446-3 provides a framework for performing and documenting
+          outdoor infrared thermographic inspections of operating PV systems.
+          It addresses important elements of the inspection process,
+          including:
+        </p>
+
+        <ul>
+
+          <li>
+            Infrared inspection equipment
+          </li>
+
+          <li>
+            Environmental conditions during inspection
+          </li>
+
+          <li>
+            PV system operating conditions
+          </li>
+
+          <li>
+            Image acquisition procedures
+          </li>
+
+          <li>
+            Inspection geometry and image quality
+          </li>
+
+          <li>
+            Evaluation of thermal abnormalities
+          </li>
+
+          <li>
+            Reporting requirements
+          </li>
+
+          <li>
+            Personnel considerations and inspection methodology
+          </li>
+
+        </ul>
+
+        <p>
+          The objective is not merely to capture attractive infrared
+          photographs. It is to obtain thermographic data under controlled
+          enough conditions that the results can support meaningful
+          engineering, commissioning, and maintenance decisions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       DRONE + GROUND
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          AERIAL + GROUND THERMOGRAPHY
+        </p>
+
+        <h2>
+          The Drone Finds the Pattern. Ground Inspection Provides the Detail.
+        </h2>
+
+        <p>
+          Large photovoltaic systems contain both expansive module fields and
+          concentrated electrical equipment. The most useful inspection often
+          combines both perspectives.
+        </p>
+
+      </div>
+
+
+      <div class="card-grid three-up">
+
+        <article class="value-card">
+
+          <h3>
+            Aerial PV Survey
+          </h3>
+
+          <p>
+            Drone thermography allows large areas of modules to be inspected
+            efficiently while preserving location and visual context for
+            detected anomalies.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <h3>
+            Ground Electrical Inspection
+          </h3>
+
+          <p>
+            Handheld thermography can evaluate inverters, combiners,
+            disconnects, panelboards, switchgear, conductors, and electrical
+            terminations under operating load.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <h3>
+            Integrated Findings
+          </h3>
+
+          <p>
+            Combining array-level and electrical-equipment findings provides
+            a more complete representation of PV system condition than either
+            technique alone.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       INSPECTION WORKFLOW
+       ========================================================= -->
+
+  <section class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          INSPECTION WORKFLOW
+        </p>
+
+        <h2>
+          From Site Planning to Corrective Action
+        </h2>
+
+      </div>
+
+
+      <div class="timeline">
+
+        <article class="timeline-step">
+
+          <strong>
+            1. Plan
+          </strong>
+
+          <p>
+            Review drawings, array layout, equipment schedules,
+            site access, and inspection objectives.
+          </p>
+
+        </article>
+
+
+        <article class="timeline-step">
+
+          <strong>
+            2. Inspect
+          </strong>
+
+          <p>
+            Acquire thermal and visible imagery under appropriate operating
+            and environmental conditions.
+          </p>
+
+        </article>
+
+
+        <article class="timeline-step">
+
+          <strong>
+            3. Analyze
+          </strong>
+
+          <p>
+            Evaluate abnormal thermal patterns and compare similar equipment,
+            modules, strings, or phases.
+          </p>
+
+        </article>
+
+
+        <article class="timeline-step">
+
+          <strong>
+            4. Report
+          </strong>
+
+          <p>
+            Document findings with equipment location, imagery,
+            measurements, observations, and priorities.
+          </p>
+
+        </article>
+
+
+        <article class="timeline-step">
+
+          <strong>
+            5. Act
+          </strong>
+
+          <p>
+            Use findings to direct troubleshooting, corrective work,
+            warranty review, or future condition monitoring.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       REPORTING
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container report-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          ACTIONABLE REPORTING
+        </p>
+
+        <h2
+          style="
+              margin-top: 0.4rem;
+              color: var(--color-navy);
+              font-size: clamp(2rem, 3vw, 3rem);
+            "
+        >
+          The Deliverable Is the Information, Not the Infrared Picture
+        </h2>
+
+        <p style="color: var(--color-text-soft);">
+          Thermal images become valuable when the customer can determine
+          exactly what equipment is involved, where it is located, why the
+          finding matters, and what should happen next.
+        </p>
+
+
+        <ul class="check-list">
+
+          <li>
+            Executive summary
+          </li>
+
+          <li>
+            Inspection scope and methodology
+          </li>
+
+          <li>
+            Site and system information
+          </li>
+
+          <li>
+            Environmental conditions
+          </li>
+
+          <li>
+            Radiometric infrared images
+          </li>
+
+          <li>
+            Corresponding visible-light images
+          </li>
+
+          <li>
+            Equipment and location identification
+          </li>
+
+          <li>
+            Temperature and ΔT measurements
+          </li>
+
+          <li>
+            Finding descriptions
+          </li>
+
+          <li>
+            Priority classification
+          </li>
+
+          <li>
+            Recommended follow-up
+          </li>
+
+          <li>
+            Summary findings table
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="report-example">
+
+        <div class="report-header">
+
+          <strong>
+            TH-012 — PV Module Thermal Anomaly
+          </strong>
+
+          <span>
+              Example finding
+            </span>
+
+        </div>
+
+
+        <div class="report-images">
+
+          <div class="report-image report-visible"></div>
+
+          <div class="report-image report-thermal"></div>
+
+        </div>
+
+
+        <div class="report-body">
+
+          <div class="report-row">
+            <span>Asset</span>
+            <strong>PV Module</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Location</span>
+            <strong>Carport C / Row 04 / Module 17</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Thermal Pattern</span>
+            <strong>Localized cell heating</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Example ΔT</span>
+            <strong>18.4°C</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Priority</span>
+            <strong>P2 — Investigate</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Recommended Action</span>
+            <strong>Electrical / module evaluation</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       BUSINESS VALUE
+       ========================================================= -->
+
+  <section class="section section-dark">
+
+    <div class="container">
+
+      <div class="section-heading section-heading-light">
+
+        <p class="eyebrow">
+          THE BUSINESS CASE
+        </p>
+
+        <h2>
+          Thermal Inspection Converts Invisible Risk Into Actionable Data
+        </h2>
+
+      </div>
+
+
+      <div class="card-grid three-up">
+
+        <article class="standard-card">
+
+          <h3>
+            Catch Problems Earlier
+          </h3>
+
+          <p>
+            Developing electrical abnormalities frequently create heat before
+            they create an obvious outage or visible failure.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Reduce Troubleshooting Time
+          </h3>
+
+          <p>
+            Instead of searching an entire installation, maintenance personnel
+            can begin with specific modules, strings, or components identified
+            during inspection.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Protect Energy Production
+          </h3>
+
+          <p>
+            Module and string abnormalities may reduce production without
+            causing an obvious system-wide failure.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Improve Commissioning
+          </h3>
+
+          <p>
+            Thermal inspection provides another layer of quality assurance
+            after a new installation has been energized and placed under load.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Support Warranty Documentation
+          </h3>
+
+          <p>
+            Timestamped thermal and visible evidence can document the
+            condition of equipment while installation and equipment
+            warranties remain active.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Build Condition History
+          </h3>
+
+          <p>
+            Recurring inspections allow findings to be compared over time,
+            helping distinguish isolated anomalies from developing trends.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       PACKAGES
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          INSPECTION OPTIONS
+        </p>
+
+        <h2>
+          Match the Inspection to the Asset Lifecycle
+        </h2>
+
+      </div>
+
+
+      <div class="inspection-packages">
+
+        <article class="package-card">
+
+          <h3>
+            SolarScan™
+          </h3>
+
+          <p>
+            Aerial thermal inspection focused primarily on the PV array.
+          </p>
+
+          <ul>
+
+            <li>
+              Radiometric drone survey
+            </li>
+
+            <li>
+              Visible imagery
+            </li>
+
+            <li>
+              Module anomaly identification
+            </li>
+
+            <li>
+              Geolocated findings
+            </li>
+
+            <li>
+              Summary report
+            </li>
+
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">
+            Request a Quote
+          </a>
+
+        </article>
+
+
+        <article class="package-card featured">
+
+            <span class="package-label">
+              MOST COMPLETE
+            </span>
+
+          <h3>
+            Commission™
+          </h3>
+
+          <p>
+            Combined PV and electrical thermography for new system commissioning.
+          </p>
+
+          <ul>
+
+            <li>
+              Aerial PV thermal survey
+            </li>
+
+            <li>
+              Ground electrical thermography
+            </li>
+
+            <li>
+              Inverters and combiner equipment
+            </li>
+
+            <li>
+              Disconnects and terminations
+            </li>
+
+            <li>
+              Commissioning baseline
+            </li>
+
+            <li>
+              Detailed findings register
+            </li>
+
+            <li>
+              Punch-list support
+            </li>
+
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">
+            Request a Quote
+          </a>
+
+        </article>
+
+
+        <article class="package-card">
+
+          <h3>
+            Maintain™
+          </h3>
+
+          <p>
+            Recurring thermal condition assessment for operating assets.
+          </p>
+
+          <ul>
+
+            <li>
+              Annual or periodic inspections
+            </li>
+
+            <li>
+              New anomaly detection
+            </li>
+
+            <li>
+              Previous-inspection comparison
+            </li>
+
+            <li>
+              Thermal trend documentation
+            </li>
+
+            <li>
+              Maintenance prioritization
+            </li>
+
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">
+            Request a Quote
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       SERVICE AREA
+       ========================================================= -->
+
+  <section class="section section-alt">
+
+    <div class="container service-area-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          SOUTHERN CALIFORNIA
+        </p>
+
+        <h2
+          style="
+              color: var(--color-navy);
+              font-size: clamp(2rem, 3vw, 3rem);
+              margin-top: 0.4rem;
+            "
+        >
+          Local PV Thermal Inspection Coverage
+        </h2>
+
+        <p style="color: var(--color-text-soft);">
+          ThermaVista is based in North County and provides commercial and
+          industrial solar inspection services throughout:
+        </p>
+
+
+        <ul class="check-list">
+
+          <li>
+            San Diego County
+          </li>
+
+          <li>
+            Orange County
+          </li>
+
+          <li>
+            Riverside County
+          </li>
+
+        </ul>
+
+
+        <p style="color: var(--color-text-soft);">
+          Typical projects include commercial rooftops, solar carports,
+          municipal installations, schools, industrial facilities,
+          commercial properties, ground-mounted PV, and larger distributed
+          generation assets.
+        </p>
+
+      </div>
+
+
+      <div class="map-card">
+
+        <div class="map-placeholder">
+
+          <div class="map-region sd">
+            San Diego County
+          </div>
+
+          <div class="map-region oc">
+            Orange County
+          </div>
+
+          <div class="map-region rc">
+            Riverside County
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       FAQ
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          FREQUENTLY ASKED QUESTIONS
+        </p>
+
+        <h2>
+          Solar PV Thermal Inspection FAQ
+        </h2>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+
+          <summary>
+            Can thermal imaging identify defective solar panels?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Thermal imaging can identify abnormal temperature patterns
+              associated with certain module, cell, substring, connection,
+              shading, and operating conditions. Thermography is generally
+              used to locate and characterize anomalies; additional electrical
+              or physical testing may be required to determine definitive
+              root cause.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Why use a drone instead of inspecting modules by hand?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Commercial photovoltaic installations can contain thousands of
+              modules spread across rooftops, carports, or ground-mounted
+              arrays. A thermal drone can inspect large areas efficiently
+              while collecting thermal and visible imagery with geographic
+              context. Ground inspection remains valuable for electrical
+              equipment and targeted follow-up.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Does the PV system need to be operating during inspection?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Yes. Meaningful PV thermography generally requires the system
+              to be operating under sufficient solar irradiance and electrical
+              load. Environmental and system conditions are therefore an
+              important part of inspection planning.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can an inspection be performed on a cloudy day?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Variable clouds can rapidly alter module temperature and
+              irradiance, reducing the reliability of thermal comparisons.
+              Suitable inspection windows are selected based on environmental
+              conditions and the objectives of the inspection.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Should a new solar installation receive a thermal inspection?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Thermal inspection can provide useful commissioning information
+              once the system is energized and operating. It may reveal
+              abnormal conditions not apparent during conventional visual
+              inspection and can establish a baseline for subsequent
+              maintenance inspections.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How often should an existing PV system be thermally inspected?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Inspection frequency depends on asset criticality, operating
+              environment, maintenance strategy, equipment history, owner
+              requirements, and applicable maintenance programs. Many owners
+              incorporate thermography into periodic condition-based
+              maintenance rather than relying solely on one-time inspection.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is included in the inspection report?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Typical reports include inspection scope, methodology,
+              environmental conditions, thermal and visible imagery,
+              equipment identification, finding locations, temperature
+              observations, anomaly descriptions, priorities, and recommended
+              follow-up.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Does ThermaVista repair the problems it identifies?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              ThermaVista's primary role is inspection, thermographic
+              analysis, documentation, and condition assessment. Findings can
+              be provided to the owner's electrician, EPC contractor, O&amp;M
+              provider, equipment manufacturer, or other qualified service
+              provider for corrective work.
+            </p>
+
+          </div>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       FINAL CTA
+       ========================================================= -->
+
+  <section
+    id="contact"
+    class="section bottom-cta"
+  >
+
+    <div class="container bottom-cta-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          REQUEST AN INSPECTION
+        </p>
+
+        <h2>
+          Know What Your PV System Is Telling You.
+        </h2>
+
+        <p>
+          Contact ThermaVista for commissioning, acceptance-support, or
+          periodic thermal inspection of commercial photovoltaic systems
+          throughout San Diego, Orange, and Riverside Counties.
+        </p>
+
+      </div>
+
+
+      <a
+        href="mailto:info@thermavista.com?subject=Solar%20PV%20Thermal%20Inspection%20Request"
+        class="btn btn-primary"
+      >
+        Request an Inspection
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <div>
+
+      <h3>
+        ThermaVista
+      </h3>
+
+      <p>
+        Thermal drone inspections and infrared thermography for solar PV and
+        electrical systems throughout Southern California.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h4>
+        Services
+      </h4>
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="solar-pv-thermal-inspections.html">
+            Solar PV Thermal Inspections
+          </a>
+        </li>
+
+        <li>
+          <a href="electrical-thermography.html">
+            Electrical Thermography
+          </a>
+        </li>
+
+        <li>
+          <a href="commissioning-inspections.html">
+            Commissioning Inspections
+          </a>
+        </li>
+
+        <li>
+          <a href="preventive-maintenance.html">
+            Preventive Maintenance
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div>
+
+      <h4>
+        Service Area
+      </h4>
+
+      <ul class="footer-links">
+
+        <li>
+          North County
+        </li>
+
+        <li>
+          San Diego County
+        </li>
+
+        <li>
+          Orange County
+        </li>
+
+        <li>
+          Riverside County
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div>
+
+      <h4>
+        Contact
+      </h4>
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="tel:+10000000000">
+            (000) 000-0000
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:info@thermavista.com">
+            info@thermavista.com
+          </a>
+        </li>
+
+        <li>
+          Monday–Friday
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <p>
+      © 2026 ThermaVista. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
