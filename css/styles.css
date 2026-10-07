@@ -456,16 +456,16 @@ ul {
   box-shadow: var(--shadow-soft);
 }
 
-.visible-image {
+.visible-pv-image {
   background:
     linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.1)),
-    url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+    url("../img/examples/el-super-MAX_1024.JPG") center/cover no-repeat;
 }
 
-.thermal-image {
+.thermal-pv-image {
   background:
-    linear-gradient(135deg, rgba(255, 0, 102, 0.15), rgba(255, 204, 0, 0.18)),
-    radial-gradient(circle at 60% 50%, #ffd54a 0%, #ff7a00 12%, #ff2f6d 26%, #742dd2 52%, #2a0f5f 100%);
+    linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.1)),
+    url("../img/examples/el-super-IRX_1024.jpg") center/cover no-repeat;
 }
 
 .image-label {
@@ -613,7 +613,7 @@ ul {
   overflow: hidden;
 }
 
-.map-placeholder::before {
+.map-placeholder_bak::before {
   content: "";
   position: absolute;
   inset: 12% 18% 14% 20%;
