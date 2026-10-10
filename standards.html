@@ -1,0 +1,1416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>
+    Thermal Inspection Standards | IEC & ANSI/NETA | ThermaVista
+  </title>
+
+  <meta name="description"
+        content="Learn how ThermaVista uses IEC TS 62446-3 and ANSI/NETA guidelines for solar PV and electrical thermal inspections throughout Southern California.">
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+  <link rel="shortcut icon" href="./img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+
+  <style>
+    /* Page-specific ThermaVista styles */
+
+    :root {
+      --tv-navy: #0e2747;
+      --tv-blue: #163b67;
+      --tv-orange: #f47c20;
+      --tv-light: #f5f8fc;
+      --tv-border: #d8e1eb;
+      --tv-muted: #5d6d7e;
+    }
+
+    .standards-hero {
+      background:
+        linear-gradient(110deg,
+        rgba(8,24,42,.97),
+        rgba(14,39,71,.88)),
+        url("images/standards-hero.jpg")
+        center/cover no-repeat;
+
+      color: white;
+      padding: 90px 0;
+    }
+
+    .standards-hero__inner {
+      max-width: 900px;
+    }
+
+    .standards-hero h1 {
+      font-size: clamp(2.6rem,5vw,4.6rem);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+      margin: 12px 0 22px;
+    }
+
+    .standards-hero h1 span {
+      color: var(--tv-orange);
+    }
+
+    .standards-hero p {
+      max-width: 780px;
+      color: rgba(255,255,255,.87);
+      font-size: 1.1rem;
+    }
+
+    .standards-hero__actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .standards-intro {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .standards-intro h2 {
+      color: var(--tv-navy);
+      font-size: clamp(2rem,3vw,2.8rem);
+      line-height: 1.15;
+    }
+
+    .standards-intro p {
+      color: var(--tv-muted);
+    }
+
+    .standards-cards {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 24px;
+      margin-top: 45px;
+    }
+
+    .standards-card {
+      background: white;
+      border: 1px solid var(--tv-border);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(14,39,71,.07);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .standards-card__code {
+      color: var(--tv-orange);
+      font-weight: 800;
+      font-size: .9rem;
+      letter-spacing: .06em;
+    }
+
+    .standards-card h3 {
+      color: var(--tv-navy);
+      font-size: 1.45rem;
+      margin: 10px 0 14px;
+      line-height: 1.3;
+    }
+
+    .standards-card p,
+    .standards-card li {
+      color: var(--tv-muted);
+    }
+
+    .standards-card ul {
+      padding-left: 20px;
+      margin-bottom: 24px;
+    }
+
+    .standards-card li {
+      margin-bottom: 9px;
+    }
+
+    .standards-card__link {
+      margin-top: auto;
+      color: var(--tv-orange);
+      font-weight: 700;
+    }
+
+    .standards-card__link:hover {
+      text-decoration: underline;
+    }
+
+    .standard-feature {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .standard-feature__panel {
+      padding: 36px;
+      border-radius: 20px;
+      background: linear-gradient(135deg,
+      var(--tv-navy),var(--tv-blue));
+      color: white;
+    }
+
+    .standard-feature__panel h3 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 20px;
+    }
+
+    .standard-feature__panel p {
+      color: rgba(255,255,255,.82);
+    }
+
+    .standard-feature__content h2 {
+      font-size: clamp(2rem,3vw,2.8rem);
+      color: var(--tv-navy);
+      line-height: 1.15;
+    }
+
+    .standard-feature__content p,
+    .standard-feature__content li {
+      color: var(--tv-muted);
+    }
+
+    .standard-feature__content li {
+      margin-bottom: 12px;
+    }
+
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .requirement {
+      background: white;
+      border: 1px solid var(--tv-border);
+      border-top: 4px solid var(--tv-orange);
+      padding: 24px;
+      border-radius: 12px;
+    }
+
+    .requirement h3 {
+      color: var(--tv-navy);
+      margin: 0 0 10px;
+    }
+
+    .requirement p {
+      margin: 0;
+      color: var(--tv-muted);
+      font-size: .96rem;
+    }
+
+    .lifecycle {
+      display: grid;
+      grid-template-columns: repeat(5,minmax(0,1fr));
+      gap: 12px;
+      margin: 45px 0 25px;
+    }
+
+    .lifecycle-step {
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.09);
+      border-radius: 13px;
+      padding: 22px 14px;
+      text-align: center;
+    }
+
+    .lifecycle-step__number {
+      display: inline-grid;
+      place-items: center;
+      background: var(--tv-orange);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: white;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .lifecycle-step strong {
+      display: block;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .lifecycle-step span:last-child {
+      display: block;
+      margin-top: 7px;
+      color: rgba(255,255,255,.7);
+      font-size: .85rem;
+    }
+
+    .comparison-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--tv-border);
+      border-radius: 16px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    .comparison-table th {
+      background: var(--tv-navy);
+      color: white;
+      text-align: left;
+      padding: 17px;
+      font-size: .9rem;
+    }
+
+    .comparison-table td {
+      padding: 17px;
+      border-bottom: 1px solid var(--tv-border);
+      color: var(--tv-muted);
+      vertical-align: top;
+    }
+
+    .comparison-table td:first-child {
+      color: var(--tv-navy);
+      font-weight: 700;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .reporting-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .reporting-item {
+      border-radius: 14px;
+      background: white;
+      border: 1px solid var(--tv-border);
+      padding: 25px;
+    }
+
+    .reporting-item h3 {
+      color: var(--tv-navy);
+      margin: 0 0 10px;
+    }
+
+    .reporting-item p {
+      color: var(--tv-muted);
+      margin: 0;
+    }
+
+    .notice {
+      margin-top: 32px;
+      padding: 22px 25px;
+      border-left: 4px solid var(--tv-orange);
+      border-radius: 8px;
+      background: #fff8f1;
+      color: #4a4a4a;
+    }
+
+    .faq-list {
+      max-width: 940px;
+      margin: 35px auto 0;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--tv-border);
+      border-radius: 12px;
+      margin-bottom: 13px;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 20px 24px;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--tv-navy);
+    }
+
+    .faq-item summary:hover {
+      background: var(--tv-light);
+    }
+
+    .faq-item p {
+      padding: 0 24px 20px;
+      color: var(--tv-muted);
+      margin: 0;
+    }
+
+    .standards-cta {
+      background: linear-gradient(
+        120deg,#0e2747,#174b67);
+      color: white;
+      padding: 60px 0;
+    }
+
+    .standards-cta__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .standards-cta h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem,3vw,2.7rem);
+    }
+
+    .standards-cta p {
+      color: rgba(255,255,255,.8);
+      max-width: 720px;
+    }
+
+    @media (max-width: 980px) {
+      .standard-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .requirements-grid,
+      .reporting-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .lifecycle {
+        grid-template-columns: repeat(3,1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .standards-hero {
+        padding: 65px 0;
+      }
+
+      .standards-cards,
+      .requirements-grid,
+      .reporting-grid,
+      .lifecycle {
+        grid-template-columns: 1fr;
+      }
+
+      .standards-cta__inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="index.html"
+       class="brand"
+       aria-label="ThermaVista Home">
+
+      <div class="brand-mark">TV</div>
+
+      <div class="brand-text">
+        <span class="brand-name">ThermaVista</span>
+        <span class="brand-tagline">
+          See More. Keep It Performing.
+        </span>
+      </div>
+    </a>
+
+    <input type="checkbox"
+           id="nav-toggle"
+           class="nav-toggle">
+
+    <label for="nav-toggle"
+           class="nav-toggle-label"
+           aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="site-nav"
+         aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="solar-pv-thermal-inspections.html">
+            Solar PV
+          </a>
+        </li>
+        <li>
+          <a href="electrical-thermography.html">
+            Electrical
+          </a>
+        </li>
+        <li>
+          <a href="commissioning-inspections.html">
+            Commissioning
+          </a>
+        </li>
+        <li>
+          <a href="standards.html"
+             aria-current="page">
+            Standards
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="btn btn-nav contact-btn">
+            Request an Inspection
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="standards-hero">
+    <div class="container">
+
+      <div class="standards-hero__inner">
+        <p class="eyebrow">
+          STANDARDS & INSPECTION METHODOLOGY
+        </p>
+
+        <h1>
+          Better Standards.
+          <span>Better Inspections.</span>
+          Better Decisions.
+        </h1>
+
+        <p>
+          Infrared inspection is only as valuable as the
+          methods used to collect, evaluate, and document
+          the data. ThermaVista uses structured inspection
+          practices informed by recognized IEC and ANSI/NETA
+          standards to support photovoltaic and electrical
+          commissioning and maintenance.
+        </p>
+
+        <div class="standards-hero__actions">
+          <a class="btn btn-primary"
+             href="#standards-overview">
+            Explore the Standards
+          </a>
+
+          <a class="btn btn-secondary"
+             href="#inspection-methodology">
+            Our Methodology
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section" id="standards-overview">
+    <div class="container">
+
+      <div class="standards-intro">
+        <p class="eyebrow">TECHNICAL FOUNDATION</p>
+
+        <h2>
+          A Thermal Image Is Evidence.
+          A Proper Inspection Provides Context.
+        </h2>
+
+        <p>
+          Thermal cameras detect infrared radiation and
+          provide information about surface temperature
+          patterns. But meaningful interpretation also
+          depends on system load, environmental conditions,
+          emissivity, reflected radiation, equipment
+          characteristics, and measurement technique.
+        </p>
+
+        <p>
+          Recognized inspection standards help make
+          thermographic observations more consistent,
+          repeatable, and useful for engineering and
+          maintenance decisions.
+        </p>
+      </div>
+
+      <div class="standards-cards">
+
+        <!-- IEC -->
+        <article class="standards-card">
+        <span class="standards-card__code">
+          IEC TS 62446-3:2017
+        </span>
+
+          <h3>
+            Outdoor Infrared Thermography
+            of PV Systems
+          </h3>
+
+          <p>
+            Establishes requirements for inspecting
+            photovoltaic modules and plants using
+            infrared thermography during operation.
+          </p>
+
+          <ul>
+            <li>Thermal inspection equipment</li>
+            <li>Environmental conditions</li>
+            <li>Image acquisition procedures</li>
+            <li>Thermal abnormality evaluation</li>
+            <li>Inspection reporting</li>
+            <li>Personnel qualification considerations</li>
+          </ul>
+
+          <a class="standards-card__link"
+             href="https://webstore.iec.ch/en/publication/28628"
+             target="_blank"
+             rel="noopener noreferrer">
+            Official IEC Publication →
+          </a>
+        </article>
+
+        <!-- ECS -->
+        <article class="standards-card">
+        <span class="standards-card__code">
+          ANSI/NETA ECS-2024
+        </span>
+
+          <h3>
+            Electrical Commissioning
+            Specifications
+          </h3>
+
+          <p>
+            Provides a framework for electrical
+            commissioning of newly installed or
+            retrofitted power systems.
+          </p>
+
+          <ul>
+            <li>Commissioning planning and coordination</li>
+            <li>System performance verification</li>
+            <li>Project requirements and documentation</li>
+            <li>Equipment and system evaluation</li>
+            <li>Commissioning records</li>
+            <li>Support for project turnover</li>
+          </ul>
+
+          <a class="standards-card__link"
+             href="https://www.netaworld.org/standards"
+             target="_blank"
+             rel="noopener noreferrer">
+            Official NETA Standards →
+          </a>
+        </article>
+
+        <!-- ATS -->
+        <article class="standards-card">
+        <span class="standards-card__code">
+          ANSI/NETA ATS-2025
+        </span>
+
+          <h3>
+            Acceptance Testing
+            Specifications
+          </h3>
+
+          <p>
+            Addresses inspection and testing used
+            to evaluate electrical equipment and
+            systems before acceptance into service.
+          </p>
+
+          <ul>
+            <li>Equipment inspection requirements</li>
+            <li>Acceptance testing procedures</li>
+            <li>Manufacturer tolerance evaluation</li>
+            <li>Electrical equipment condition</li>
+            <li>Solar PV systems — Section 7.29</li>
+            <li>BESS systems — Section 7.28</li>
+          </ul>
+
+          <a class="standards-card__link"
+             href="https://www.netaworld.org/standards"
+             target="_blank"
+             rel="noopener noreferrer">
+            Official NETA Standards →
+          </a>
+        </article>
+
+        <!-- MTS -->
+        <article class="standards-card">
+        <span class="standards-card__code">
+          ANSI/NETA MTS-2023
+        </span>
+
+          <h3>
+            Maintenance Testing
+            Specifications
+          </h3>
+
+          <p>
+            Addresses maintenance testing and
+            evaluation of electrical power
+            equipment already in service.
+          </p>
+
+          <ul>
+            <li>Periodic equipment testing</li>
+            <li>Condition assessment</li>
+            <li>Suitability for continued service</li>
+            <li>Preventive maintenance support</li>
+            <li>Equipment reliability</li>
+            <li>Documentation and evaluation</li>
+          </ul>
+
+          <a class="standards-card__link"
+             href="https://www.netaworld.org/standards"
+             target="_blank"
+             rel="noopener noreferrer">
+            Official NETA Standards →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IEC DETAILS -->
+  <section class="section section-alt">
+    <div class="container standard-feature">
+
+      <aside class="standard-feature__panel">
+        <p class="eyebrow">PHOTOVOLTAIC THERMOGRAPHY</p>
+
+        <h3>IEC TS 62446-3</h3>
+
+        <p>
+          Outdoor infrared thermography provides an
+          efficient method for identifying abnormal
+          temperature patterns across operating PV modules
+          and plants.
+        </p>
+
+        <p>
+          The technical specification addresses inspection
+          conditions, procedures, equipment, analysis,
+          reporting, and personnel considerations.
+        </p>
+      </aside>
+
+      <div class="standard-feature__content">
+        <p class="eyebrow">WHY IT MATTERS</p>
+
+        <h2>
+          Reliable PV Inspection Starts With
+          Controlled Conditions
+        </h2>
+
+        <p>
+          Solar thermal inspection depends on sufficient
+          irradiance and meaningful electrical operation.
+          Wind, clouds, reflections, and viewing geometry
+          can affect temperature measurements and the
+          visibility of thermal anomalies.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Irradiance:</strong>
+            Sufficient and stable sunlight to support
+            meaningful thermal contrast.
+          </li>
+
+          <li>
+            <strong>Wind:</strong>
+            Conditions evaluated to limit convective
+            cooling effects.
+          </li>
+
+          <li>
+            <strong>System operation:</strong>
+            Appropriate PV operating conditions during
+            inspection.
+          </li>
+
+          <li>
+            <strong>Viewing geometry:</strong>
+            Suitable camera positioning to manage
+            reflections and resolve targets.
+          </li>
+
+          <li>
+            <strong>Documentation:</strong>
+            Thermal images, measurements, site conditions,
+            and findings associated with identifiable assets.
+          </li>
+        </ul>
+
+        <p>
+          These practices help separate genuine thermal
+          abnormalities from artifacts caused by unsuitable
+          inspection conditions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INSPECTION FACTORS -->
+  <section class="section" id="inspection-methodology">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">INSPECTION METHODOLOGY</p>
+
+        <h2>
+          Measurement Quality Depends on
+          More Than Camera Resolution
+        </h2>
+
+        <p>
+          ThermaVista considers operating conditions,
+          equipment characteristics, and environmental
+          influences when acquiring and interpreting
+          thermal data.
+        </p>
+      </div>
+
+      <div class="requirements-grid">
+
+        <article class="requirement">
+          <h3>System Loading</h3>
+          <p>
+            Electrical heating is load-dependent.
+            Equipment must operate under conditions
+            suitable for the inspection objective.
+          </p>
+        </article>
+
+        <article class="requirement">
+          <h3>Emissivity</h3>
+          <p>
+            Surface emissivity affects apparent temperature.
+            Measurement parameters must account for
+            material and surface characteristics.
+          </p>
+        </article>
+
+        <article class="requirement">
+          <h3>Reflected Radiation</h3>
+          <p>
+            Reflective electrical surfaces can produce
+            misleading apparent temperatures that require
+            careful evaluation.
+          </p>
+        </article>
+
+        <article class="requirement">
+          <h3>Temperature Comparison</h3>
+          <p>
+            Similar components under comparable operating
+            conditions can provide useful reference
+            temperatures and ΔT measurements.
+          </p>
+        </article>
+
+        <article class="requirement">
+          <h3>Viewing Geometry</h3>
+          <p>
+            Distance, viewing angle, focus, and spatial
+            resolution affect measurement reliability
+            and anomaly detection.
+          </p>
+        </article>
+
+        <article class="requirement">
+          <h3>Environmental Conditions</h3>
+          <p>
+            Ambient temperature, solar heating, wind,
+            and weather can change the observed thermal
+            response of equipment.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFECYCLE -->
+  <section class="section section-dark">
+    <div class="container">
+
+      <div class="section-heading section-heading-light">
+        <p class="eyebrow">SYSTEM LIFECYCLE</p>
+
+        <h2>
+          The Right Inspection at the Right Time
+        </h2>
+
+        <p>
+          Electrical commissioning, acceptance, and
+          maintenance serve different objectives.
+          Thermography can support each stage when
+          appropriately specified and performed.
+        </p>
+      </div>
+
+      <div class="lifecycle">
+
+        <div class="lifecycle-step">
+          <span class="lifecycle-step__number">1</span>
+          <strong>Install</strong>
+          <span>Construction and assembly</span>
+        </div>
+
+        <div class="lifecycle-step">
+          <span class="lifecycle-step__number">2</span>
+          <strong>Commission</strong>
+          <span>ANSI/NETA ECS</span>
+        </div>
+
+        <div class="lifecycle-step">
+          <span class="lifecycle-step__number">3</span>
+          <strong>Accept</strong>
+          <span>ANSI/NETA ATS</span>
+        </div>
+
+        <div class="lifecycle-step">
+          <span class="lifecycle-step__number">4</span>
+          <strong>Operate</strong>
+          <span>Establish baseline condition</span>
+        </div>
+
+        <div class="lifecycle-step">
+          <span class="lifecycle-step__number">5</span>
+          <strong>Maintain</strong>
+          <span>ANSI/NETA MTS</span>
+        </div>
+
+      </div>
+
+      <p style="text-align:center;color:rgba(255,255,255,.75)">
+        Thermographic findings support engineering,
+        commissioning, and maintenance decisions;
+        they do not replace required electrical tests.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">STANDARDS COMPARISON</p>
+
+        <h2>
+          Which Standard Applies to Your Project?
+        </h2>
+      </div>
+
+      <div class="comparison-wrap">
+
+        <table class="comparison-table">
+
+          <thead>
+          <tr>
+            <th>Standard</th>
+            <th>Primary Purpose</th>
+            <th>Lifecycle Stage</th>
+            <th>ThermaVista Application</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td>IEC TS 62446-3:2017</td>
+            <td>
+              Outdoor infrared inspection
+              of operating PV modules and plants
+            </td>
+            <td>
+              Commissioning and maintenance
+            </td>
+            <td>
+              Aerial PV thermography, thermal
+              abnormality documentation
+            </td>
+          </tr>
+
+          <tr>
+            <td>ANSI/NETA ECS-2024</td>
+            <td>
+              Electrical-system commissioning
+            </td>
+            <td>
+              New or retrofitted installations
+            </td>
+            <td>
+              Thermographic support for
+              commissioning verification
+            </td>
+          </tr>
+
+          <tr>
+            <td>ANSI/NETA ATS-2025</td>
+            <td>
+              Electrical acceptance testing
+            </td>
+            <td>
+              Prior to acceptance
+            </td>
+            <td>
+              Infrared inspection support
+              for applicable equipment
+            </td>
+          </tr>
+
+          <tr>
+            <td>ANSI/NETA MTS-2023</td>
+            <td>
+              Maintenance testing and
+              condition evaluation
+            </td>
+            <td>
+              In-service equipment
+            </td>
+            <td>
+              Periodic electrical thermography
+              and condition trending
+            </td>
+          </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTING -->
+  <section class="section section-alt">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">DOCUMENTED RESULTS</p>
+
+        <h2>
+          Standards-Aligned Inspection Should
+          Produce Actionable Documentation
+        </h2>
+
+        <p>
+          Reports should allow maintenance and
+          commissioning personnel to identify the
+          affected equipment, understand the observation,
+          and determine the appropriate next step.
+        </p>
+      </div>
+
+      <div class="reporting-grid">
+
+        <article class="reporting-item">
+          <h3>Inspection Conditions</h3>
+          <p>
+            Operating load, environmental measurements,
+            relevant camera settings, and site information.
+          </p>
+        </article>
+
+        <article class="reporting-item">
+          <h3>Thermal Evidence</h3>
+          <p>
+            Radiometric infrared imagery with
+            corresponding visible-light documentation.
+          </p>
+        </article>
+
+        <article class="reporting-item">
+          <h3>Asset Identification</h3>
+          <p>
+            Site, building, equipment, component,
+            array, or module location.
+          </p>
+        </article>
+
+        <article class="reporting-item">
+          <h3>Temperature Analysis</h3>
+          <p>
+            Observed temperatures, reference
+            temperatures, and relevant ΔT comparisons.
+          </p>
+        </article>
+
+        <article class="reporting-item">
+          <h3>Finding Classification</h3>
+          <p>
+            Thermal observations and applicable
+            classification or prioritization criteria.
+          </p>
+        </article>
+
+        <article class="reporting-item">
+          <h3>Recommended Follow-Up</h3>
+          <p>
+            Specific components requiring investigation,
+            corrective action, or future monitoring.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="section">
+    <div class="container standard-feature">
+
+      <aside class="standard-feature__panel">
+        <p class="eyebrow">ELECTRICAL SAFETY</p>
+
+        <h3>
+          Safety Is Part of the Inspection Method
+        </h3>
+
+        <p>
+          Energized electrical equipment presents
+          electrical shock, arc-flash, and other hazards.
+          Thermal imaging does not eliminate these risks.
+        </p>
+      </aside>
+
+      <div class="standard-feature__content">
+        <p class="eyebrow">INSPECTION LIMITATIONS</p>
+
+        <h2>
+          Appropriate Access, Qualified Personnel,
+          and Defined Responsibilities
+        </h2>
+
+        <p>
+          Thermographic inspection of energized
+          equipment requires coordination with the
+          facility's electrical safety program.
+        </p>
+
+        <ul>
+          <li>
+            Access to energized equipment must be
+            evaluated under applicable electrical
+            safety requirements.
+          </li>
+          <li>
+            Removal of electrical covers or barriers
+            may require qualified electrical personnel.
+          </li>
+          <li>
+            Arc-flash and shock hazards must be
+            evaluated before exposure.
+          </li>
+          <li>
+            PPE, approach boundaries, permits, and
+            work practices must be addressed as applicable.
+          </li>
+          <li>
+            Thermography cannot reveal every electrical
+            defect, particularly where components are
+            obstructed or operating conditions are unsuitable.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMPORTANT QUALIFICATION -->
+  <section class="section section-alt">
+    <div class="container">
+
+      <div class="standards-intro">
+        <p class="eyebrow">PROFESSIONAL REPRESENTATION</p>
+
+        <h2>
+          Standards-Aligned Does Not Mean
+          Standards-Certified
+        </h2>
+
+        <p>
+          ThermaVista references applicable technical
+          standards to inform thermographic inspection
+          practices. Specific inspection scope and
+          acceptance criteria are established by
+          project requirements and agreement.
+        </p>
+      </div>
+
+      <div class="notice">
+        <strong>Important distinction:</strong>
+        Use of IEC and ANSI/NETA standards as technical
+        references does not imply endorsement by IEC or
+        NETA, certification of ThermaVista by either
+        organization, or accreditation as a NETA
+        Accredited Company. Thermographic inspection
+        is not a substitute for a complete electrical
+        commissioning, acceptance, or maintenance
+        testing program.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+
+        <h2>
+          Standards & Thermography FAQ
+        </h2>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>
+            What is IEC TS 62446-3?
+          </summary>
+          <p>
+            IEC TS 62446-3 is a technical specification
+            addressing outdoor infrared thermography
+            of operating photovoltaic modules and plants,
+            including inspection equipment, environmental
+            conditions, procedures, reporting, personnel
+            qualifications, and guidance for classifying
+            thermal abnormalities.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            What is the difference between
+            ANSI/NETA ECS and ATS?
+          </summary>
+          <p>
+            ECS addresses the broader electrical
+            commissioning process, while ATS focuses
+            on acceptance testing and evaluation of
+            electrical power equipment and systems.
+            Both may apply to a new installation
+            depending on project requirements.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Which standard applies to an existing
+            electrical system?
+          </summary>
+          <p>
+            ANSI/NETA MTS addresses maintenance testing
+            of electrical equipment already in service.
+            IEC TS 62446-3 may also be applicable to
+            outdoor infrared inspection of operating
+            photovoltaic systems.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Does thermography replace other
+            electrical testing?
+          </summary>
+          <p>
+            No. Thermal imaging is a complementary
+            condition assessment method. Other electrical
+            testing, visual inspections, functional
+            verification, and commissioning activities
+            may be required to establish equipment
+            performance and compliance.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Can thermography identify a loose connection?
+          </summary>
+          <p>
+            Abnormal heating may be consistent with
+            a high-resistance connection, but thermography
+            alone generally cannot prove the specific
+            mechanical or electrical root cause.
+            Further evaluation may be required.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Are inspections performed while equipment
+            is operating?
+          </summary>
+          <p>
+            Many thermographic inspections require
+            equipment to operate under meaningful load.
+            Conditions and safety procedures must be
+            appropriate for the equipment and inspection
+            objectives.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="standards-cta" id="contact">
+    <div class="container standards-cta__inner">
+
+      <div>
+        <p class="eyebrow">
+          THERMAVISTA INSPECTIONS
+        </p>
+
+        <h2>
+          Inspection Methods That Support
+          Better Decisions.
+        </h2>
+
+        <p>
+          ThermaVista provides aerial PV and
+          ground-based electrical thermography
+          for commissioning and maintenance
+          throughout San Diego, Orange,
+          and Riverside Counties.
+        </p>
+      </div>
+
+      <a class="btn btn-primary contact-btn"
+         href="#contact">
+        Request an Inspection
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Popup Modal Overlay -->
+  <div id="contactModal" class="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="contact-modal__backdrop" data-close-modal></div>
+
+    <div class="contact-modal__dialog">
+      <button type="button" class="contact-modal__close" aria-label="Close contact form" data-close-modal>×</button>
+
+      <h2 id="contactModalTitle">Contact Us</h2>
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="d277d345-957e-4268-8b7b-366514b97cec"/>
+        <input type="hidden" name="subject" value="New ThermaVista Website Contact"/>
+        <input type="hidden" name="from_name" value="ThermaVista Website"/>
+
+
+        <div class="contact-honeypot" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="botcheck" type="text" tabindex="-1" autocomplete="off"/>
+        </div>
+        <div>
+          <label for="contactName">Name</label>
+          <input id="contactName" name="name" type="text" required/>
+        </div>
+
+        <div>
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" name="email" type="email" required/>
+        </div>
+
+        <div>
+          <label for="contactPhone">Phone</label>
+          <input id="contactPhone" name="phone" type="tel"/>
+        </div>
+
+        <div>
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="5" required ></textarea>
+        </div>
+
+        <div id="contactStatus" aria-live="polite"></div>
+
+        <button id="contactSubmitButton" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>ThermaVista</h3>
+      <p>
+        Thermal drone inspections and infrared thermography for solar PV and
+        electrical systems across Southern California.
+      </p>
+    </div>
+
+    <div>
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="./solar-pv-thermal-inspections.html">Solar PV Thermal Inspections</a></li>
+        <li><a href="./electrical-thermography.html">Electrical Thermography</a></li>
+        <li><a href="./commissioning-inspections.html">Commissioning Inspections</a></li>
+        <li><a href="./preventive-maintenance.html">Preventive Maintenance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Service Area</h4>
+      <ul class="footer-links">
+        <li>North County</li>
+        <li>San Diego County</li>
+        <li>Orange County</li>
+        <li>Riverside County</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+17607607220">(760) 760-7220</a></li>
+        <li><a href="mailto:sales@thermavista.com">sales@thermavista.com</a></li>
+        <li>Mon–Fri | 8:00 AM – 5:00 PM</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 ThermaVista. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="./js/app.js"></script>
+
+</body>
+</html>

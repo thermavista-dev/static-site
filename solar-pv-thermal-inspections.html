@@ -181,26 +181,7 @@
       min-height: 430px;
     }
 
-    .thermal-demo-visible {
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.08)),
-        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85")
-        center / cover no-repeat;
-    }
 
-    .thermal-demo-ir {
-      background:
-        radial-gradient(
-          circle at 67% 42%,
-          #fff668 0%,
-          #ffbb22 5%,
-          #ff6b00 13%,
-          #ff245c 24%,
-          #aa24ba 43%,
-          #4d278e 65%,
-          #17113c 100%
-        );
-    }
 
     .thermal-demo-label {
       position: absolute;
@@ -483,20 +464,14 @@
 
     .report-visible {
       background:
-        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80")
+        url("./img/examples/el-super-MAX_1024.JPG")
         center / cover no-repeat;
     }
 
     .report-thermal {
       background:
-        radial-gradient(
-          circle at 60% 40%,
-          #fff765,
-          #ff851b 14%,
-          #e92a73 30%,
-          #752396 55%,
-          #26104f 100%
-        );
+        url("./img/examples/el-super-IRX_1024.jpg")
+        center / cover no-repeat;
     }
 
     .report-body {
@@ -793,7 +768,7 @@
         </li>
 
         <li>
-          <a href="#contact" class="btn btn-nav">
+          <a href="#contact" class="btn btn-nav contact-btn">
             Request an Inspection
           </a>
         </li>
@@ -860,7 +835,7 @@
 
         <div class="hero-actions">
 
-          <a href="#contact" class="btn btn-primary">
+          <a href="#contact" class="btn btn-primary contact-btn">
             Request an Inspection
           </a>
 
@@ -1036,13 +1011,13 @@
         aria-label="Example visible and thermal comparison"
       >
 
-        <div class="thermal-demo-panel thermal-demo-visible">
+        <div class="thermal-demo-panel visible-pv-image">
             <span class="thermal-demo-label">
               Visible Image
             </span>
         </div>
 
-        <div class="thermal-demo-panel thermal-demo-ir">
+        <div class="thermal-demo-panel thermal-pv-image">
             <span class="thermal-demo-label">
               Thermal Image
             </span>
@@ -2099,27 +2074,27 @@
 
           <div class="report-row">
             <span>Location</span>
-            <strong>Carport C / Row 04 / Module 17</strong>
+            <strong>Array 09 / Row 07 / Module 24</strong>
           </div>
 
           <div class="report-row">
             <span>Thermal Pattern</span>
-            <strong>Localized cell heating</strong>
+            <strong>Single Cell Bad Diode</strong>
           </div>
 
           <div class="report-row">
             <span>Example ΔT</span>
-            <strong>18.4°C</strong>
+            <strong>28.4°C</strong>
           </div>
 
           <div class="report-row">
             <span>Priority</span>
-            <strong>P2 — Investigate</strong>
+            <strong>P2 — Major</strong>
           </div>
 
           <div class="report-row">
             <span>Recommended Action</span>
-            <strong>Electrical / module evaluation</strong>
+            <strong>Electrical / module evaluation. Repair or replace.</strong>
           </div>
 
         </div>
@@ -2296,16 +2271,12 @@
             </li>
 
             <li>
-              Geolocated findings
-            </li>
-
-            <li>
               Summary report
             </li>
 
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
+          <a href="#contact" class="btn btn-primary contact-btn">
             Request a Quote
           </a>
 
@@ -2358,7 +2329,7 @@
 
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
+          <a href="#contact" class="btn btn-primary contact-btn">
             Request a Quote
           </a>
 
@@ -2399,7 +2370,7 @@
 
           </ul>
 
-          <a href="#contact" class="btn btn-primary">
+          <a href="#contact" class="btn btn-primary contact-btn">
             Request a Quote
           </a>
 
@@ -2471,23 +2442,9 @@
 
 
       <div class="map-card">
-
         <div class="map-placeholder">
-
-          <div class="map-region sd">
-            San Diego County
-          </div>
-
-          <div class="map-region oc">
-            Orange County
-          </div>
-
-          <div class="map-region rc">
-            Riverside County
-          </div>
-
+          <img src="./img/semi-transparent-map.png" alt="Southern California, San Diego County, Orange County, Riverside County"/>
         </div>
-
       </div>
 
     </div>
@@ -2724,16 +2681,58 @@
       </div>
 
 
-      <a
-        href="mailto:info@thermavista.com?subject=Solar%20PV%20Thermal%20Inspection%20Request"
-        class="btn btn-primary"
-      >
+      <a class="btn btn-primary contact-btn">
         Request an Inspection
       </a>
 
     </div>
 
   </section>
+
+  <!-- Popup Modal Overlay -->
+  <div id="contactModal" class="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="contact-modal__backdrop" data-close-modal></div>
+
+    <div class="contact-modal__dialog">
+      <button type="button" class="contact-modal__close" aria-label="Close contact form" data-close-modal>×</button>
+
+      <h2 id="contactModalTitle">Contact Us</h2>
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="d277d345-957e-4268-8b7b-366514b97cec"/>
+        <input type="hidden" name="subject" value="New ThermaVista Website Contact"/>
+        <input type="hidden" name="from_name" value="ThermaVista Website"/>
+
+
+        <div class="contact-honeypot" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="botcheck" type="text" tabindex="-1" autocomplete="off"/>
+        </div>
+        <div>
+          <label for="contactName">Name</label>
+          <input id="contactName" name="name" type="text" required/>
+        </div>
+
+        <div>
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" name="email" type="email" required/>
+        </div>
+
+        <div>
+          <label for="contactPhone">Phone</label>
+          <input id="contactPhone" name="phone" type="tel"/>
+        </div>
+
+        <div>
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="5" required ></textarea>
+        </div>
+
+        <div id="contactStatus" aria-live="polite"></div>
+
+        <button id="contactSubmitButton" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
 
 </main>
 
@@ -2744,129 +2743,51 @@
      ========================================================= -->
 
 <footer class="site-footer">
-
   <div class="container footer-grid">
-
     <div>
-
-      <h3>
-        ThermaVista
-      </h3>
-
+      <h3>ThermaVista</h3>
       <p>
         Thermal drone inspections and infrared thermography for solar PV and
-        electrical systems throughout Southern California.
+        electrical systems across Southern California.
       </p>
-
     </div>
-
 
     <div>
-
-      <h4>
-        Services
-      </h4>
-
+      <h4>Services</h4>
       <ul class="footer-links">
-
-        <li>
-          <a href="solar-pv-thermal-inspections.html">
-            Solar PV Thermal Inspections
-          </a>
-        </li>
-
-        <li>
-          <a href="electrical-thermography.html">
-            Electrical Thermography
-          </a>
-        </li>
-
-        <li>
-          <a href="commissioning-inspections.html">
-            Commissioning Inspections
-          </a>
-        </li>
-
-        <li>
-          <a href="preventive-maintenance.html">
-            Preventive Maintenance
-          </a>
-        </li>
-
+        <li><a href="./solar-pv-thermal-inspections.html">Solar PV Thermal Inspections</a></li>
+        <li><a href="./electrical-thermography.html">Electrical Thermography</a></li>
+        <li><a href="./commissioning-inspections.html">Commissioning Inspections</a></li>
+        <li><a href="./preventive-maintenance.html">Preventive Maintenance</a></li>
       </ul>
-
     </div>
-
 
     <div>
-
-      <h4>
-        Service Area
-      </h4>
-
+      <h4>Service Area</h4>
       <ul class="footer-links">
-
-        <li>
-          North County
-        </li>
-
-        <li>
-          San Diego County
-        </li>
-
-        <li>
-          Orange County
-        </li>
-
-        <li>
-          Riverside County
-        </li>
-
+        <li>North County</li>
+        <li>San Diego County</li>
+        <li>Orange County</li>
+        <li>Riverside County</li>
       </ul>
-
     </div>
-
 
     <div>
-
-      <h4>
-        Contact
-      </h4>
-
+      <h4>Contact</h4>
       <ul class="footer-links">
-
-        <li>
-          <a href="tel:+10000000000">
-            (000) 000-0000
-          </a>
-        </li>
-
-        <li>
-          <a href="mailto:info@thermavista.com">
-            info@thermavista.com
-          </a>
-        </li>
-
-        <li>
-          Monday–Friday
-        </li>
-
+        <li><a href="tel:+17607607220">(760) 760-7220</a></li>
+        <li><a href="mailto:sales@thermavista.com">sales@thermavista.com</a></li>
+        <li>Mon–Fri | 8:00 AM – 5:00 PM</li>
       </ul>
-
     </div>
-
   </div>
-
 
   <div class="container footer-bottom">
-
-    <p>
-      © 2026 ThermaVista. All rights reserved.
-    </p>
-
+    <p>© 2026 ThermaVista. All rights reserved.</p>
   </div>
-
 </footer>
+
+<script src="./js/app.js"></script>
 
 </body>
 </html>

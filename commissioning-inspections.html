@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="ThermaVista provides thermal commissioning inspections for new solar PV and electrical installations throughout San Diego, Orange, and Riverside Counties. Services include aerial PV thermography, electrical thermography, punch-list support, baseline documentation, and standards-aligned reporting."
+  />
+
+  <meta
+    name="keywords"
+    content="commissioning thermal inspection, electrical commissioning thermography, solar commissioning inspection, PV commissioning inspection, thermal imaging commissioning, ANSI NETA commissioning, IEC TS 62446-3, solar thermal inspection, San Diego commissioning inspection, Orange County, Riverside County"
+  />
+
+  <meta name="author" content="ThermaVista" />
+
+  <title>
+    Commissioning Inspections | Solar & Electrical Thermography | ThermaVista
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+  <link rel="shortcut icon" href="./img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+
+  <style>
+    .service-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 0 5rem;
+      color: #fff;
+      background:
+        linear-gradient(
+          110deg,
+          rgba(7, 22, 38, 0.96) 0%,
+          rgba(14, 39, 71, 0.9) 45%,
+          rgba(14, 39, 71, 0.52) 100%
+        ),
+        url("images/commissioning-hero.jpg")
+        center / cover no-repeat;
+    }
+
+    .service-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .service-hero-copy h1 {
+      margin: 0.45rem 0 1.2rem;
+      max-width: 900px;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .service-hero-copy h1 span {
+      color: var(--color-orange);
+    }
+
+    .service-hero-copy > p:not(.eyebrow) {
+      max-width: 780px;
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .service-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .service-hero-badge {
+      padding: 0.55rem 0.85rem;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 0.87rem;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-spec-card {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.95);
+      color: var(--color-text);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-spec-card h2 {
+      margin-top: 0;
+      color: var(--color-navy);
+      font-size: 1.55rem;
+    }
+
+    .hero-spec-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-spec-list li {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 0.7rem;
+      padding: 0.72rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-spec-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .hero-spec-icon {
+      color: var(--color-orange);
+      font-weight: 800;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .intro-copy h2 {
+      margin: 0.35rem 0 1rem;
+      color: var(--color-navy);
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .intro-copy p {
+      color: var(--color-text-soft);
+      font-size: 1.03rem;
+    }
+
+    .commissioning-visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 420px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+    }
+
+    .commissioning-visual__panel {
+      position: relative;
+      min-height: 420px;
+    }
+
+    .commissioning-visual__visible {
+      background:
+        linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.06)),
+        url("images/commissioning-visible.jpg")
+        center / cover no-repeat;
+    }
+
+    .commissioning-visual__thermal {
+      background:
+        radial-gradient(
+          circle at 66% 43%,
+          #fff879 0%,
+          #ffbd24 7%,
+          #ff7218 15%,
+          #f93665 28%,
+          #922bb1 48%,
+          #3b1b79 70%,
+          #171033 100%
+        );
+    }
+
+    .commissioning-visual__label {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(10,28,45,0.8);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.3rem;
+    }
+
+    .value-card {
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .value-card h3 {
+      margin: 0 0 0.65rem;
+      color: var(--color-navy);
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--color-text-soft);
+      font-size: 0.95rem;
+    }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+
+    .scope-card {
+      padding: 1.6rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .scope-card h3 {
+      margin-top: 0;
+      color: var(--color-navy);
+    }
+
+    .scope-card p,
+    .scope-card li {
+      color: var(--color-text-soft);
+    }
+
+    .scope-card ul {
+      padding-left: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    .scope-card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+    }
+
+    .workflow-step {
+      position: relative;
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.96);
+    }
+
+    .workflow-step::after {
+      content: "→";
+      position: absolute;
+      right: -0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-orange);
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+
+    .workflow-step:last-child::after {
+      display: none;
+    }
+
+    .workflow-step strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--color-navy);
+    }
+
+    .workflow-step p {
+      margin: 0;
+      color: var(--color-text-soft);
+      font-size: 0.92rem;
+    }
+
+    .standards-grid-custom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+
+    .standard-panel {
+      padding: 1.8rem;
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .standard-panel span {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      padding: 0.38rem 0.7rem;
+      border-radius: 999px;
+      background: var(--color-orange);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .standard-panel h3 {
+      margin: 0 0 0.7rem;
+      color: var(--color-navy);
+    }
+
+    .standard-panel p {
+      margin: 0;
+      color: var(--color-text-soft);
+    }
+
+    .defect-table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .defect-table {
+      width: 100%;
+      min-width: 850px;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    .defect-table th,
+    .defect-table td {
+      padding: 1rem 1.1rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .defect-table th {
+      background: var(--color-navy);
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .defect-table td:first-child {
+      color: var(--color-navy);
+      font-weight: 700;
+    }
+
+    .defect-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .baseline-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .baseline-card {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          135deg,
+          var(--color-navy),
+          var(--color-navy-2)
+        );
+      color: #fff;
+      box-shadow: var(--shadow-card);
+    }
+
+    .baseline-card h3 {
+      margin-top: 0;
+      font-size: 1.55rem;
+    }
+
+    .baseline-card p {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .baseline-card .baseline-arrow {
+      margin-top: 1.3rem;
+      color: var(--color-orange);
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .baseline-copy h2 {
+      margin-top: 0;
+      color: var(--color-navy);
+    }
+
+    .baseline-copy p,
+    .baseline-copy li {
+      color: var(--color-text-soft);
+    }
+
+    .report-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .report-example {
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-card);
+    }
+
+    .report-header {
+      padding: 1.1rem 1.3rem;
+      background: var(--color-navy);
+      color: #fff;
+    }
+
+    .report-header strong {
+      display: block;
+    }
+
+    .report-header span {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.85rem;
+    }
+
+    .report-body {
+      padding: 1.3rem;
+    }
+
+    .report-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.9rem;
+    }
+
+    .report-row:last-child {
+      border-bottom: 0;
+    }
+
+    .report-row span {
+      color: var(--color-text-soft);
+    }
+
+    .report-row strong {
+      color: var(--color-navy);
+      text-align: right;
+    }
+
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 1.2rem 1.4rem;
+      color: var(--color-navy);
+      font-weight: 700;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      float: right;
+      color: var(--color-orange);
+      font-size: 1.3rem;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 1.4rem 1.25rem;
+      color: var(--color-text-soft);
+    }
+
+    .bottom-cta {
+      background:
+        linear-gradient(
+          110deg,
+          rgba(10,28,48,0.97),
+          rgba(19,60,89,0.93)
+        );
+      color: #fff;
+    }
+
+    .bottom-cta-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .bottom-cta h2 {
+      margin: 0.4rem 0 0.7rem;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .bottom-cta p {
+      max-width: 720px;
+      margin: 0;
+      color: rgba(255,255,255,0.8);
+    }
+
+    @media (max-width: 1050px) {
+      .service-hero-grid,
+      .intro-grid,
+      .baseline-grid,
+      .report-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .scope-grid,
+      .standards-grid-custom {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-step::after {
+        content: "↓";
+        top: auto;
+        bottom: -1.15rem;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .service-hero {
+        padding: 4.5rem 0 3.5rem;
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .commissioning-visual {
+        grid-template-columns: 1fr;
+      }
+
+      .commissioning-visual__panel {
+        min-height: 280px;
+      }
+
+      .bottom-cta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand" aria-label="ThermaVista home">
+      <div class="brand-mark">TV</div>
+
+      <div class="brand-text">
+        <span class="brand-name">ThermaVista</span>
+        <span class="brand-tagline">
+            See More. Keep It Performing.
+          </span>
+      </div>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+    <label
+      for="nav-toggle"
+      class="nav-toggle-label"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li>
+          <a href="solar-pv-thermal-inspections.html">
+            Solar PV
+          </a>
+        </li>
+
+        <li>
+          <a href="electrical-thermography.html">
+            Electrical
+          </a>
+        </li>
+
+        <li>
+          <a href="commissioning-inspections.html">
+            Commissioning
+          </a>
+        </li>
+
+        <li>
+          <a href="standards.html">
+            Standards
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" class="btn btn-nav contact-btn">
+            Request an Inspection
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="service-hero">
+
+    <div class="container service-hero-grid">
+
+      <div class="service-hero-copy">
+
+        <p class="eyebrow">
+          COMMISSIONING INSPECTIONS
+        </p>
+
+        <h1>
+          Verify the Installation
+          <span>Before You Accept the Installation.</span>
+        </h1>
+
+        <p>
+          ThermaVista provides thermal commissioning inspections for new
+          photovoltaic and electrical installations. Our inspections help
+          owners, EPC contractors, commissioning teams, and facility managers
+          identify abnormal conditions before turnover, establish baseline
+          asset condition, and document findings for corrective action.
+        </p>
+
+        <div class="service-hero-badges">
+
+            <span class="service-hero-badge">
+              New Construction
+            </span>
+
+          <span class="service-hero-badge">
+              PV + Electrical Thermography
+            </span>
+
+          <span class="service-hero-badge">
+              Punch-List Support
+            </span>
+
+          <span class="service-hero-badge">
+              Baseline Documentation
+            </span>
+
+        </div>
+
+        <div class="hero-actions">
+
+          <a href="#contact" class="btn btn-primary contact-btn">
+            Request Commissioning Support
+          </a>
+
+          <a href="#commissioning-process" class="btn btn-secondary">
+            See the Process
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <aside class="hero-spec-card">
+
+        <h2>
+          Typical Commissioning Scope
+        </h2>
+
+        <ul class="hero-spec-list">
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Aerial PV thermal survey
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Ground-based electrical thermography
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Inverters and combiner boxes
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Disconnects and switchgear
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Panelboards and load centers
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Transformers and terminations
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Findings register and punch-list support
+              </span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>
+                Baseline condition report
+              </span>
+          </li>
+
+        </ul>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+
+    <div class="container trust-grid">
+
+      <div class="trust-item">
+        <strong>IEC TS 62446-3</strong>
+        <span>
+            PV thermography methodology
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>ANSI/NETA ECS</strong>
+        <span>
+            Commissioning-oriented electrical guidance
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Thermal + Visible</strong>
+        <span>
+            Paired evidence for each finding
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Southern California</strong>
+        <span>
+            San Diego, Orange &amp; Riverside Counties
+          </span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="section">
+
+    <div class="container intro-grid">
+
+      <div class="intro-copy">
+
+        <p class="eyebrow">
+          ENERGIZED DOES NOT ALWAYS MEAN CORRECT
+        </p>
+
+        <h2>
+          A New System Can Operate and Still Contain Defects
+        </h2>
+
+        <p>
+          A newly installed system may energize successfully, communicate
+          with monitoring equipment, and produce power while still containing
+          connection problems, installation defects, module abnormalities,
+          load imbalances, or other conditions that are not apparent during
+          conventional visual inspection.
+        </p>
+
+        <p>
+          Thermal inspection adds another layer of verification by observing
+          equipment while it is energized and operating. Abnormal heat
+          patterns can identify areas that deserve additional investigation
+          before project acceptance.
+        </p>
+
+        <p>
+          That makes thermography particularly useful near the end of
+          commissioning—when the system is operational, warranties are active,
+          and corrective work is still easier to assign and document.
+        </p>
+
+      </div>
+
+
+      <div
+        class="commissioning-visual"
+        aria-label="Commissioning visible and thermal comparison"
+      >
+
+        <div class="commissioning-visual__panel commissioning-visual__visible">
+            <span class="commissioning-visual__label">
+              Visible Inspection
+            </span>
+        </div>
+
+        <div class="commissioning-visual__panel commissioning-visual__thermal">
+            <span class="commissioning-visual__label">
+              Thermal Inspection
+            </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY COMMISSION -->
+  <section class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          WHY THERMAL COMMISSIONING
+        </p>
+
+        <h2>
+          Find Problems While Responsibility Is Still Clear
+        </h2>
+
+        <p>
+          Commissioning inspection is valuable not only because it finds
+          anomalies, but because of when those anomalies are found.
+        </p>
+
+      </div>
+
+
+      <div class="value-grid">
+
+        <article class="value-card">
+
+          <h3>
+            Catch Installation Defects Early
+          </h3>
+
+          <p>
+            Identify abnormal conditions before the installation is fully
+            handed over to the owner or maintenance team.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <h3>
+            Support Punch-List Closure
+          </h3>
+
+          <p>
+            Document findings with specific equipment locations and thermal
+            evidence that can be assigned for corrective action.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <h3>
+            Protect Warranty Position
+          </h3>
+
+          <p>
+            Record issues while installation and equipment warranties are
+            still active and responsible parties remain engaged.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <h3>
+            Establish a Baseline
+          </h3>
+
+          <p>
+            Create a documented thermal condition that can be compared
+            against maintenance inspections in future years.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INSPECTION SCOPE -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          COMMISSIONING SCOPE
+        </p>
+
+        <h2>
+          One Inspection Program Across the PV and Electrical System
+        </h2>
+
+        <p>
+          The strongest commissioning program combines aerial PV
+          thermography with ground-based electrical inspection.
+        </p>
+
+      </div>
+
+
+      <div class="scope-grid">
+
+        <article class="scope-card">
+
+          <h3>
+            PV Array
+          </h3>
+
+          <p>
+            Aerial thermal inspection can rapidly evaluate large areas of
+            photovoltaic modules under operating conditions.
+          </p>
+
+          <ul>
+            <li>Module thermal abnormalities</li>
+            <li>Cell and substring hotspots</li>
+            <li>String-level differences</li>
+            <li>Shading and soiling effects</li>
+            <li>Module location documentation</li>
+          </ul>
+
+        </article>
+
+
+        <article class="scope-card">
+
+          <h3>
+            PV Electrical Equipment
+          </h3>
+
+          <p>
+            Ground inspection can evaluate the balance-of-system equipment
+            that connects the array to the facility electrical system.
+          </p>
+
+          <ul>
+            <li>Combiner boxes</li>
+            <li>Inverters</li>
+            <li>DC disconnects</li>
+            <li>AC disconnects</li>
+            <li>Terminations and conductors</li>
+          </ul>
+
+        </article>
+
+
+        <article class="scope-card">
+
+          <h3>
+            Distribution Equipment
+          </h3>
+
+          <p>
+            Electrical thermography can be extended downstream into
+            accessible distribution equipment.
+          </p>
+
+          <ul>
+            <li>Switchgear</li>
+            <li>Panelboards</li>
+            <li>Load centers</li>
+            <li>Transformers</li>
+            <li>Breakers, fuses, taps, and splices</li>
+          </ul>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT WE FIND -->
+  <section class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          COMMISSIONING FINDINGS
+        </p>
+
+        <h2>
+          What Thermal Inspection Can Reveal Before Turnover
+        </h2>
+
+      </div>
+
+
+      <div class="defect-table-wrapper">
+
+        <table class="defect-table">
+
+          <thead>
+          <tr>
+            <th>Observation</th>
+            <th>Possible Condition</th>
+            <th>Commissioning Value</th>
+            <th>Typical Follow-Up</th>
+          </tr>
+          </thead>
+
+          <tbody>
+
+          <tr>
+            <td>PV module hotspot</td>
+            <td>
+              Cell defect, localized damage, mismatch, shading,
+              or module abnormality
+            </td>
+            <td>
+              Identify affected modules before project turnover
+            </td>
+            <td>
+              Module evaluation and warranty review
+            </td>
+          </tr>
+
+          <tr>
+            <td>String-level thermal difference</td>
+            <td>
+              Open circuit, mismatch, shading, or wiring issue
+            </td>
+            <td>
+              May reveal reduced production not obvious from visual inspection
+            </td>
+            <td>
+              String current and voltage testing
+            </td>
+          </tr>
+
+          <tr>
+            <td>Connector or termination hotspot</td>
+            <td>
+              High resistance, poor connection, contamination,
+              or installation issue
+            </td>
+            <td>
+              Supports targeted corrective work prior to acceptance
+            </td>
+            <td>
+              Qualified electrical evaluation
+            </td>
+          </tr>
+
+          <tr>
+            <td>Breaker or fuse heating</td>
+            <td>
+              Load issue, poor contact, device condition,
+              or connection abnormality
+            </td>
+            <td>
+              Identifies equipment requiring investigation before handoff
+            </td>
+            <td>
+              Load verification and electrical testing
+            </td>
+          </tr>
+
+          <tr>
+            <td>Phase temperature imbalance</td>
+            <td>
+              Load imbalance, connection issue, or unequal resistance
+            </td>
+            <td>
+              Provides evidence for additional electrical verification
+            </td>
+            <td>
+              Phase loading and connection evaluation
+            </td>
+          </tr>
+
+          <tr>
+            <td>Transformer termination heating</td>
+            <td>
+              High-resistance connection or installation-related issue
+            </td>
+            <td>
+              Helps identify problems before long-term operation
+            </td>
+            <td>
+              Electrical inspection and corrective action
+            </td>
+          </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+  <section
+    id="commissioning-process"
+    class="section section-dark"
+  >
+
+    <div class="container">
+
+      <div class="section-heading section-heading-light">
+
+        <p class="eyebrow">
+          COMMISSIONING WORKFLOW
+        </p>
+
+        <h2>
+          From Construction Completion to Documented Baseline
+        </h2>
+
+        <p>
+          Thermal commissioning is most useful when it is integrated into
+          project turnover rather than treated as an isolated inspection.
+        </p>
+
+      </div>
+
+
+      <div class="workflow">
+
+        <article class="workflow-step">
+          <strong>1. Review</strong>
+          <p>
+            Review drawings, equipment schedules, asset lists,
+            project scope, and commissioning requirements.
+          </p>
+        </article>
+
+        <article class="workflow-step">
+          <strong>2. Coordinate</strong>
+          <p>
+            Confirm access, safety requirements, energization status,
+            loading, and environmental conditions.
+          </p>
+        </article>
+
+        <article class="workflow-step">
+          <strong>3. Inspect</strong>
+          <p>
+            Capture thermal and visible imagery of PV and electrical assets
+            under suitable operating conditions.
+          </p>
+        </article>
+
+        <article class="workflow-step">
+          <strong>4. Analyze</strong>
+          <p>
+            Evaluate abnormal thermal patterns and compare similar
+            components, phases, modules, and equipment.
+          </p>
+        </article>
+
+        <article class="workflow-step">
+          <strong>5. Report</strong>
+          <p>
+            Document findings with location, imagery, measurements,
+            priority, and recommended follow-up.
+          </p>
+        </article>
+
+        <article class="workflow-step">
+          <strong>6. Verify</strong>
+          <p>
+            Support corrective action and, where required, re-inspect
+            completed repairs or resolved findings.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STANDARDS -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          STANDARDS-ALIGNED INSPECTION
+        </p>
+
+        <h2>
+          Commissioning Requires the Right Standard for the Right System
+        </h2>
+
+      </div>
+
+
+      <div class="standards-grid-custom">
+
+        <article class="standard-panel">
+
+            <span>
+              PV THERMOGRAPHY
+            </span>
+
+          <h3>
+            IEC TS 62446-3
+          </h3>
+
+          <p>
+            Provides guidance for outdoor infrared thermography of operating
+            photovoltaic modules and plants, including data acquisition,
+            environmental conditions, equipment, analysis, and reporting.
+          </p>
+
+        </article>
+
+
+        <article class="standard-panel">
+
+            <span>
+              COMMISSIONING
+            </span>
+
+          <h3>
+            ANSI/NETA ECS
+          </h3>
+
+          <p>
+            Provides a commissioning framework for electrical power systems
+            and helps support verification that installed systems meet project
+            requirements and intended operation.
+          </p>
+
+        </article>
+
+
+        <article class="standard-panel">
+
+            <span>
+              ACCEPTANCE
+            </span>
+
+          <h3>
+            ANSI/NETA ATS
+          </h3>
+
+          <p>
+            Addresses acceptance testing and inspection used to evaluate
+            newly installed electrical equipment before final acceptance and
+            long-term service.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <p
+        style="
+            margin-top: 1.25rem;
+            color: var(--color-text-soft);
+            font-size: 0.9rem;
+          "
+      >
+        ThermaVista should describe its services as aligned with or informed
+        by applicable standards unless a specific certification,
+        accreditation, or formal authorization is held.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- BASELINE -->
+  <section class="section section-alt">
+
+    <div class="container baseline-grid">
+
+      <aside class="baseline-card">
+
+        <h3>
+          Commissioning Is Day Zero for Condition Monitoring
+        </h3>
+
+        <p>
+          A thermal inspection at project turnover creates a documented
+          reference condition for future inspections.
+        </p>
+
+        <div class="baseline-arrow">
+          Commission → Operate → Compare → Maintain
+        </div>
+
+      </aside>
+
+
+      <div class="baseline-copy">
+
+        <p class="eyebrow">
+          LONG-TERM VALUE
+        </p>
+
+        <h2>
+          The First Inspection Makes Future Inspections More Valuable
+        </h2>
+
+        <p>
+          Without a commissioning baseline, maintenance teams may discover a
+          thermal anomaly years later without knowing whether it is new,
+          stable, or worsening.
+        </p>
+
+        <p>
+          Baseline data gives future inspections context.
+        </p>
+
+        <ul>
+          <li>
+            Compare temperature differences over time
+          </li>
+
+          <li>
+            Track repeat findings
+          </li>
+
+          <li>
+            Identify developing conditions
+          </li>
+
+          <li>
+            Support maintenance prioritization
+          </li>
+
+          <li>
+            Document post-repair condition
+          </li>
+
+          <li>
+            Build a defensible asset-condition history
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REPORTING -->
+  <section class="section">
+
+    <div class="container report-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          COMMISSIONING DELIVERABLES
+        </p>
+
+        <h2
+          style="
+              margin-top: 0.4rem;
+              color: var(--color-navy);
+              font-size: clamp(2rem, 3vw, 3rem);
+            "
+        >
+          Documentation Designed for Project Closeout
+        </h2>
+
+        <p style="color: var(--color-text-soft);">
+          ThermaVista commissioning reports are structured so findings can be
+          reviewed by the owner, EPC, commissioning team, electrician,
+          equipment manufacturer, or O&amp;M provider.
+        </p>
+
+        <ul class="check-list">
+
+          <li>
+            Executive summary
+          </li>
+
+          <li>
+            Inspection scope and methodology
+          </li>
+
+          <li>
+            Site and equipment identification
+          </li>
+
+          <li>
+            Environmental and operating conditions
+          </li>
+
+          <li>
+            Thermal and visible-light imagery
+          </li>
+
+          <li>
+            Temperature and ΔT measurements
+          </li>
+
+          <li>
+            Finding descriptions
+          </li>
+
+          <li>
+            Priority classifications
+          </li>
+
+          <li>
+            Corrective-action recommendations
+          </li>
+
+          <li>
+            Findings register
+          </li>
+
+          <li>
+            Baseline record for future comparison
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="report-example">
+
+        <div class="report-header">
+
+          <strong>
+            TH-018 — AC Termination Thermal Anomaly
+          </strong>
+
+          <span>
+              Example commissioning finding
+            </span>
+
+        </div>
+
+
+        <div class="report-body">
+
+          <div class="report-row">
+            <span>System</span>
+            <strong>PV Inverter</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Equipment</span>
+            <strong>Inverter 03</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Component</span>
+            <strong>L2 AC Termination</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Observation</span>
+            <strong>Localized abnormal heating</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Example ΔT</span>
+            <strong>12.8°C</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Priority</span>
+            <strong>P2 — Investigate</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Status</span>
+            <strong>Open Punch-List Item</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Recommended Follow-Up</span>
+            <strong>Qualified electrical evaluation</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BUSINESS VALUE -->
+  <section class="section section-dark">
+
+    <div class="container">
+
+      <div class="section-heading section-heading-light">
+
+        <p class="eyebrow">
+          PROJECT VALUE
+        </p>
+
+        <h2>
+          Better Project Handover. Better Long-Term Asset Data.
+        </h2>
+
+      </div>
+
+
+      <div class="card-grid three-up">
+
+        <article class="standard-card">
+
+          <h3>
+            Reduce Closeout Risk
+          </h3>
+
+          <p>
+            Identify unresolved conditions before the project transitions
+            from construction responsibility to owner responsibility.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Improve Punch Lists
+          </h3>
+
+          <p>
+            Provide specific locations, images, and findings rather than
+            vague descriptions of suspected problems.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Support Warranty Claims
+          </h3>
+
+          <p>
+            Create time-stamped evidence while equipment and installation
+            warranties remain active.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Improve Owner Confidence
+          </h3>
+
+          <p>
+            Provide independent documentation that the operating system was
+            inspected after energization.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Accelerate Troubleshooting
+          </h3>
+
+          <p>
+            Direct electrical and O&amp;M teams to the exact components that
+            warrant further investigation.
+          </p>
+
+        </article>
+
+
+        <article class="standard-card">
+
+          <h3>
+            Establish Maintenance History
+          </h3>
+
+          <p>
+            Start the asset's thermal condition record at commissioning
+            rather than years later.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICE AREA -->
+  <section class="section section-alt">
+
+    <div class="container service-area-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          SOUTHERN CALIFORNIA
+        </p>
+
+        <h2
+          style="
+              color: var(--color-navy);
+              font-size: clamp(2rem, 3vw, 3rem);
+              margin-top: 0.4rem;
+            "
+        >
+          Commissioning Support Across Southern California
+        </h2>
+
+        <p style="color: var(--color-text-soft);">
+          ThermaVista is based in North County and provides commissioning
+          thermography throughout:
+        </p>
+
+        <ul class="check-list">
+          <li>San Diego County</li>
+          <li>Orange County</li>
+          <li>Riverside County</li>
+        </ul>
+
+        <p style="color: var(--color-text-soft);">
+          Typical projects include commercial rooftops, solar carports,
+          schools, municipal facilities, industrial sites, commercial
+          campuses, and distributed-generation installations.
+        </p>
+
+      </div>
+
+
+      <div class="map-card">
+        <div class="map-placeholder">
+          <img src="./img/semi-transparent-map.png" alt="Southern California, San Diego County, Orange County, Riverside County"/>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          FREQUENTLY ASKED QUESTIONS
+        </p>
+
+        <h2>
+          Commissioning Inspection FAQ
+        </h2>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+
+          <summary>
+            When should the thermal commissioning inspection be performed?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              The inspection should generally occur after the system has been
+              energized and can operate under meaningful load. For PV systems,
+              suitable solar irradiance and environmental conditions are also
+              required for useful thermal evaluation.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Does a successful startup mean the system does not need thermal inspection?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              No. Equipment may energize and operate while still containing
+              connection issues, load imbalances, module abnormalities, or
+              other conditions that are not apparent during startup or visual
+              inspection.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can thermal findings be used on a project punch list?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              Yes. Thermal findings can be documented with equipment
+              identification, location, visible imagery, infrared imagery,
+              temperature data, and recommended follow-up so they can be
+              assigned and tracked through project closeout.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can ThermaVista verify repairs after corrective work?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              Yes. Re-inspection can be used to document post-repair thermal
+              condition when the equipment can be safely operated under
+              suitable load and inspection conditions.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Is commissioning thermography only for solar projects?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              No. Thermography can support commissioning of a wide range of
+              electrical systems, including switchgear, transformers,
+              panelboards, disconnects, distribution equipment, inverters,
+              and other energized electrical assets.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is the difference between commissioning and maintenance thermography?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              Commissioning thermography evaluates newly installed or newly
+              modified equipment and establishes initial condition.
+              Maintenance thermography evaluates equipment already in service
+              and is often used to detect deterioration or compare conditions
+              over time.
+            </p>
+          </div>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section
+    id="contact"
+    class="section bottom-cta"
+  >
+
+    <div class="container bottom-cta-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          REQUEST AN INSPECTION
+        </p>
+
+        <h2>
+          Find the Heat Before It Becomes the Failure.
+        </h2>
+
+        <p>
+          Contact ThermaVista for commissioning, maintenance, or targeted
+          electrical thermography throughout San Diego, Orange, and
+          Riverside Counties.
+        </p>
+
+      </div>
+
+      <a
+        href="#contact"
+        class="btn btn-primary contact-btn"
+      >
+        Request an Inspection
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Popup Modal Overlay -->
+  <div id="contactModal" class="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="contact-modal__backdrop" data-close-modal></div>
+
+    <div class="contact-modal__dialog">
+      <button type="button" class="contact-modal__close" aria-label="Close contact form" data-close-modal>×</button>
+
+      <h2 id="contactModalTitle">Contact Us</h2>
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="d277d345-957e-4268-8b7b-366514b97cec"/>
+        <input type="hidden" name="subject" value="New ThermaVista Website Contact"/>
+        <input type="hidden" name="from_name" value="ThermaVista Website"/>
+
+
+        <div class="contact-honeypot" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="botcheck" type="text" tabindex="-1" autocomplete="off"/>
+        </div>
+        <div>
+          <label for="contactName">Name</label>
+          <input id="contactName" name="name" type="text" required/>
+        </div>
+
+        <div>
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" name="email" type="email" required/>
+        </div>
+
+        <div>
+          <label for="contactPhone">Phone</label>
+          <input id="contactPhone" name="phone" type="tel"/>
+        </div>
+
+        <div>
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="5" required ></textarea>
+        </div>
+
+        <div id="contactStatus" aria-live="polite"></div>
+
+        <button id="contactSubmitButton" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>ThermaVista</h3>
+      <p>
+        Thermal drone inspections and infrared thermography for solar PV and
+        electrical systems across Southern California.
+      </p>
+    </div>
+
+    <div>
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="./solar-pv-thermal-inspections.html">Solar PV Thermal Inspections</a></li>
+        <li><a href="./electrical-thermography.html">Electrical Thermography</a></li>
+        <li><a href="./commissioning-inspections.html">Commissioning Inspections</a></li>
+        <li><a href="./preventive-maintenance.html">Preventive Maintenance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Service Area</h4>
+      <ul class="footer-links">
+        <li>North County</li>
+        <li>San Diego County</li>
+        <li>Orange County</li>
+        <li>Riverside County</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+17607607220">(760) 760-7220</a></li>
+        <li><a href="mailto:sales@thermavista.com">sales@thermavista.com</a></li>
+        <li>Mon–Fri | 8:00 AM – 5:00 PM</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 ThermaVista. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="./js/app.js"></script>
+
+</body>
+</html>

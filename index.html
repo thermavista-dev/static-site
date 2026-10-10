@@ -168,7 +168,7 @@
             Drone-based and targeted ground-based thermography for commercial and utility
             photovoltaic systems, including modules, strings, combiners, inverters, and BOS equipment.
           </p>
-          <a href="#contact" class="text-link">Learn More</a>
+          <a href="./solar-pv-thermal-inspections.html" class="text-link">Learn More</a>
         </article>
 
         <article class="service-card">
@@ -178,7 +178,7 @@
             Infrared inspection of electrical equipment such as switchgear, panelboards,
             disconnects, transformers, inverters, and terminations to identify abnormal heating.
           </p>
-          <a href="#contact" class="text-link">Learn More</a>
+          <a href="./electrical-thermography.html" class="text-link">Learn More</a>
         </article>
 
         <article class="service-card">
@@ -188,7 +188,7 @@
             Verify new installations, support punch-list development, and establish a baseline
             thermal condition before final turnover and long-term operation.
           </p>
-          <a href="#contact" class="text-link">Learn More</a>
+          <a href="./commissioning-inspections.html" class="text-link">Learn More</a>
         </article>
 
         <article class="service-card">
@@ -198,7 +198,7 @@
             Periodic inspections help asset owners detect developing conditions early,
             track changes over time, and prioritize maintenance resources intelligently.
           </p>
-          <a href="#contact" class="text-link">Learn More</a>
+          <a href="./preventive-maintenance.html" class="text-link">Learn More</a>
         </article>
       </div>
     </div>
@@ -244,7 +244,7 @@
             </div>
             <div class="metric">
               <span class="metric-value">Action</span>
-              <span class="metric-label">Bad diode in panel A9R07C24. Investigate Further</span>
+              <span class="metric-label">Bad diode in panel A9R07M24. Investigate Further</span>
             </div>
           </div>
         </article>
@@ -461,16 +461,13 @@
       <div class="map-card">
         <div class="map-placeholder">
           <img src="./img/semi-transparent-map.png" alt="Southern California, San Diego County, Orange County, Riverside County"/>
-<!--          <div class="map-region sd">San Diego County</div>-->
-<!--          <div class="map-region oc">Orange County</div>-->
-<!--          <div class="map-region rc">Riverside County</div>-->
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
+  <section id="contact" class="cta-section">
     <div class="container cta-card">
       <div>
         <p class="eyebrow">READY TO TALK?</p>
@@ -531,7 +528,7 @@
 
 </main>
 
-<footer id="contact" class="site-footer">
+<footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <h3>ThermaVista</h3>
@@ -544,16 +541,17 @@
     <div>
       <h4>Services</h4>
       <ul class="footer-links">
-        <li><a href="#services">Solar PV Thermal Inspections</a></li>
-        <li><a href="#services">Electrical Thermography</a></li>
-        <li><a href="#services">Commissioning Inspections</a></li>
-        <li><a href="#services">Preventive Maintenance</a></li>
+        <li><a href="./solar-pv-thermal-inspections.html">Solar PV Thermal Inspections</a></li>
+        <li><a href="./electrical-thermography.html">Electrical Thermography</a></li>
+        <li><a href="./commissioning-inspections.html">Commissioning Inspections</a></li>
+        <li><a href="./preventive-maintenance.html">Preventive Maintenance</a></li>
       </ul>
     </div>
 
     <div>
       <h4>Service Area</h4>
       <ul class="footer-links">
+        <li>North County</li>
         <li>San Diego County</li>
         <li>Orange County</li>
         <li>Riverside County</li>
@@ -575,103 +573,7 @@
   </div>
 </footer>
 
-
-<script>
-
-  (() => {
-    const modal = document.getElementById("contactModal");
-    const closeButtons = modal.querySelectorAll("[data-close-modal]");
-    const form = document.getElementById("contactForm");
-    const submitButton = document.getElementById("contactSubmitButton");
-    const status = document.getElementById("contactStatus");
-
-    const WEB3FORMS_URL = "https://api.web3forms.com/submit";
-
-    const openModal = () => {
-      modal.classList.add("is-open");
-      modal.setAttribute("aria-hidden", "false");
-
-      document.body.style.overflow = "hidden";
-
-      document.getElementById("contactName").focus();
-    };
-
-    const closeModal = () => {
-      modal.classList.remove("is-open");
-      modal.setAttribute("aria-hidden", "true");
-
-      document.body.style.overflow = "";
-
-      status.textContent = "";
-    };
-
-    document.querySelectorAll('.contact-btn').forEach(item => {
-      item.addEventListener('click', e => openModal())
-    });
-
-    closeButtons.forEach((button) => {
-      button.addEventListener("click", closeModal);
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && modal.classList.contains("is-open")) {
-        closeModal();
-      }
-    });
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      if (!form.reportValidity()) {
-        return;
-      }
-
-      submitButton.disabled = true;
-      submitButton.textContent = "Sending...";
-      status.textContent = "";
-
-      try {
-        const formData = new FormData(form);
-        const botCheck = formData.get("botcheck").value;
-        if (botCheck && botCheck.trim() !== "") {
-          console.warn("Spam submission blocked.");
-          return;
-        }
-
-        const response = await fetch(WEB3FORMS_URL, {
-          method: "POST",
-          body: formData
-        });
-
-        const result = await response.json();
-
-        if (!response.ok || !result.success) {
-          throw new Error(
-            result.message || "Unable to send message."
-          );
-        }
-
-        form.reset();
-
-        status.textContent = "Message sent successfully.";
-
-        setTimeout(() => {
-          closeModal();
-        }, 500);
-
-      } catch (error) {
-        console.error(error);
-
-        status.textContent =
-          "There was a problem sending your message. Please try again or give us a call.";
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit";
-      }
-    });
-  })();
-
-</script>
+<script src="./js/app.js"></script>
 
 </body>
 </html>

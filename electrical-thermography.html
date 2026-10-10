@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="ThermaVista provides electrical thermography and infrared inspection services for switchgear, panelboards, transformers, disconnects, inverters, conductors, and electrical terminations throughout San Diego, Orange, and Riverside Counties."
+  />
+
+  <meta
+    name="keywords"
+    content="electrical thermography, infrared electrical inspection, switchgear thermal inspection, electrical infrared inspection, thermal camera inspection, preventive maintenance, electrical commissioning, ANSI NETA, San Diego, Orange County, Riverside County"
+  />
+
+  <meta name="author" content="ThermaVista" />
+
+  <title>
+    Electrical Thermography | Infrared Electrical Inspections | ThermaVista
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+  <link rel="shortcut icon" href="./img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+
+
+  <style>
+    .service-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 0 5rem;
+      color: #fff;
+      background:
+        linear-gradient(
+          110deg,
+          rgba(7, 22, 38, 0.95) 0%,
+          rgba(14, 39, 71, 0.89) 45%,
+          rgba(14, 39, 71, 0.5) 100%
+        ),
+        url("images/electrical-thermography-hero.jpg")
+        center / cover no-repeat;
+    }
+
+    .service-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .service-hero-copy h1 {
+      margin: 0.45rem 0 1.2rem;
+      max-width: 900px;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .service-hero-copy h1 span {
+      color: var(--color-orange);
+    }
+
+    .service-hero-copy > p:not(.eyebrow) {
+      max-width: 760px;
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .service-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .service-hero-badge {
+      padding: 0.55rem 0.85rem;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 0.87rem;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-spec-card {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.94);
+      color: var(--color-text);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-spec-card h2 {
+      margin-top: 0;
+      color: var(--color-navy);
+      font-size: 1.55rem;
+    }
+
+    .hero-spec-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-spec-list li {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 0.7rem;
+      padding: 0.72rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-spec-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .hero-spec-icon {
+      color: var(--color-orange);
+      font-weight: 800;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .intro-copy h2 {
+      margin: 0.35rem 0 1rem;
+      color: var(--color-navy);
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .intro-copy p {
+      color: var(--color-text-soft);
+      font-size: 1.03rem;
+    }
+
+    .thermal-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 420px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+    }
+
+    .thermal-comparison__panel {
+      position: relative;
+      min-height: 420px;
+    }
+
+    .thermal-comparison__visible {
+      background:
+        linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.08)),
+        url("./img/examples/vis-th010_cb01.jpg")
+        center / cover no-repeat;
+    }
+
+    .thermal-comparison__ir {
+      background:
+        linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.08)),
+        url("./img/examples/ir-th010_cb01.jpg")
+        center / cover no-repeat;
+    }
+
+    .thermal-comparison__label {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(10,28,45,0.8);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.3rem;
+    }
+
+    .equipment-card {
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .equipment-card h3 {
+      margin: 0 0 0.65rem;
+      color: var(--color-navy);
+    }
+
+    .equipment-card p {
+      margin: 0;
+      color: var(--color-text-soft);
+      font-size: 0.95rem;
+    }
+
+    .finding-table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .finding-table {
+      width: 100%;
+      min-width: 850px;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    .finding-table th,
+    .finding-table td {
+      padding: 1rem 1.1rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .finding-table th {
+      background: var(--color-navy);
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .finding-table td:first-child {
+      color: var(--color-navy);
+      font-weight: 700;
+    }
+
+    .finding-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .methodology-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+
+    .methodology-card {
+      padding: 1.6rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.96);
+      color: var(--color-text);
+    }
+
+    .methodology-number {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      background: var(--color-orange);
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .methodology-card h3 {
+      margin: 0 0 0.65rem;
+      color: var(--color-navy);
+    }
+
+    .methodology-card p {
+      margin: 0;
+      color: var(--color-text-soft);
+    }
+
+    .delta-t-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .delta-t-box {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          135deg,
+          var(--color-navy),
+          var(--color-navy-2)
+        );
+      color: #fff;
+      box-shadow: var(--shadow-card);
+    }
+
+    .delta-t-box .delta-symbol {
+      margin-bottom: 0.5rem;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--color-orange);
+    }
+
+    .delta-t-box h3 {
+      margin: 0 0 0.7rem;
+      font-size: 1.5rem;
+    }
+
+    .delta-t-box p {
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .delta-t-copy h2 {
+      margin-top: 0;
+      color: var(--color-navy);
+    }
+
+    .delta-t-copy p,
+    .delta-t-copy li {
+      color: var(--color-text-soft);
+    }
+
+    .severity-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+
+    .severity-card {
+      padding: 1.35rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .severity-card strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--color-navy);
+    }
+
+    .severity-card span {
+      color: var(--color-text-soft);
+      font-size: 0.91rem;
+    }
+
+    .standards-feature {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .standard-callout {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          135deg,
+          var(--color-navy),
+          var(--color-navy-2)
+        );
+      color: #fff;
+      box-shadow: var(--shadow-card);
+    }
+
+    .standard-callout .standard-code {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: var(--color-orange);
+      color: #fff;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .standard-callout h3 {
+      margin: 0 0 1rem;
+      font-size: 1.7rem;
+    }
+
+    .standard-callout p {
+      margin-bottom: 0;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .standards-detail h2 {
+      margin-top: 0;
+      color: var(--color-navy);
+    }
+
+    .standards-detail p,
+    .standards-detail li {
+      color: var(--color-text-soft);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+    }
+
+    .process-step {
+      position: relative;
+    }
+
+    .process-step::after {
+      content: "→";
+      position: absolute;
+      right: -0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-orange);
+      font-weight: 800;
+      font-size: 1.3rem;
+      z-index: 2;
+    }
+
+    .process-step:last-child::after {
+      display: none;
+    }
+
+    .report-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .report-example {
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-card);
+    }
+
+    .report-header {
+      padding: 1.1rem 1.3rem;
+      background: var(--color-navy);
+      color: #fff;
+    }
+
+    .report-header strong {
+      display: block;
+    }
+
+    .report-header span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .report-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .report-image {
+      min-height: 170px;
+    }
+
+    .report-visible {
+      background:
+        url("./img/examples/vis-th011_inv04.jpg")
+        center / cover no-repeat;
+    }
+
+    .report-thermal {
+      background:
+        url("./img/examples/ir-th011_inv04.jpg")
+        center / cover no-repeat;
+    }
+
+    .report-body {
+      padding: 1.3rem;
+    }
+
+    .report-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.9rem;
+    }
+
+    .report-row:last-child {
+      border-bottom: 0;
+    }
+
+    .report-row span {
+      color: var(--color-text-soft);
+    }
+
+    .report-row strong {
+      color: var(--color-navy);
+      text-align: right;
+    }
+
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 1.2rem 1.4rem;
+      color: var(--color-navy);
+      font-weight: 700;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      float: right;
+      color: var(--color-orange);
+      font-size: 1.3rem;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 1.4rem 1.25rem;
+      color: var(--color-text-soft);
+    }
+
+    .bottom-cta {
+      background:
+        linear-gradient(
+          110deg,
+          rgba(10,28,48,0.96),
+          rgba(19,60,89,0.92)
+        );
+      color: #fff;
+    }
+
+    .bottom-cta-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .bottom-cta h2 {
+      margin: 0.4rem 0 0.7rem;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .bottom-cta p {
+      max-width: 720px;
+      margin: 0;
+      color: rgba(255,255,255,0.8);
+    }
+
+    @media (max-width: 1050px) {
+      .service-hero-grid,
+      .intro-grid,
+      .delta-t-grid,
+      .standards-feature,
+      .report-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .equipment-grid,
+      .severity-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .methodology-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step::after {
+        content: "↓";
+        top: auto;
+        bottom: -1.15rem;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .service-hero {
+        padding: 4.5rem 0 3.5rem;
+      }
+
+      .equipment-grid,
+      .severity-grid,
+      .methodology-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .thermal-comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .thermal-comparison__panel {
+        min-height: 280px;
+      }
+
+      .bottom-cta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand" aria-label="ThermaVista home">
+      <div class="brand-mark">TV</div>
+
+      <div class="brand-text">
+        <span class="brand-name">ThermaVista</span>
+        <span class="brand-tagline">
+            See More. Keep It Performing.
+          </span>
+      </div>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+    <label
+      for="nav-toggle"
+      class="nav-toggle-label"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li>
+          <a href="solar-pv-thermal-inspections.html">
+            Solar PV
+          </a>
+        </li>
+
+        <li>
+          <a href="electrical-thermography.html">
+            Electrical
+          </a>
+        </li>
+
+        <li>
+          <a href="commissioning-inspections.html">
+            Commissioning
+          </a>
+        </li>
+
+        <li>
+          <a href="standards.html">
+            Standards
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" class="btn btn-nav contact-btn">
+            Request an Inspection
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="service-hero">
+
+    <div class="container service-hero-grid">
+
+      <div class="service-hero-copy">
+
+        <p class="eyebrow">
+          ELECTRICAL THERMOGRAPHY
+        </p>
+
+        <h1>
+          Electrical Problems Often Generate
+          <span>Heat Before Failure.</span>
+        </h1>
+
+        <p>
+          ThermaVista provides infrared thermographic inspection of
+          commercial and industrial electrical systems to identify abnormal
+          heating, compare similar components, document equipment condition,
+          and support commissioning and preventive maintenance programs.
+        </p>
+
+        <div class="service-hero-badges">
+
+            <span class="service-hero-badge">
+              Ground-Based Infrared Inspection
+            </span>
+
+          <span class="service-hero-badge">
+              Commissioning &amp; Maintenance
+            </span>
+
+          <span class="service-hero-badge">
+              ANSI/NETA-Aligned Practices
+            </span>
+
+          <span class="service-hero-badge">
+              Southern California
+            </span>
+
+        </div>
+
+        <div class="hero-actions">
+
+          <a href="#contact" class="btn btn-primary contact-btn">
+            Request an Inspection
+          </a>
+
+          <a href="#inspection-process" class="btn btn-secondary">
+            See Our Process
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <aside class="hero-spec-card">
+
+        <h2>
+          Typical Equipment Inspected
+        </h2>
+
+        <ul class="hero-spec-list">
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>Switchgear and switchboards</span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>Panelboards and load centers</span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>Circuit breakers and disconnects</span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>Transformers</span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>Inverters and combiner boxes</span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>Fuses and fuse holders</span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>Bus connections and terminations</span>
+          </li>
+
+          <li>
+            <span class="hero-spec-icon">✓</span>
+            <span>Taps, splices, and conductors</span>
+          </li>
+
+        </ul>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+
+    <div class="container trust-grid">
+
+      <div class="trust-item">
+        <strong>ANSI/NETA</strong>
+        <span>
+            Commissioning, acceptance &amp; maintenance guidance
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Radiometric Imaging</strong>
+        <span>
+            Quantitative temperature information
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Under-Load Inspection</strong>
+        <span>
+            Observe equipment during operation
+          </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Southern California</strong>
+        <span>
+            San Diego, Orange &amp; Riverside Counties
+          </span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="section">
+
+    <div class="container intro-grid">
+
+      <div class="intro-copy">
+
+        <p class="eyebrow">
+          SEE CONDITIONS BEFORE THEY BECOME FAILURES
+        </p>
+
+        <h2>
+          Increased Electrical Resistance Produces Heat
+        </h2>
+
+        <p>
+          Electrical defects often develop gradually. A connection may
+          loosen, corrode, deteriorate, or become overloaded while remaining
+          visually unremarkable.
+        </p>
+
+        <p>
+          As resistance increases, heat can develop at the affected point.
+          Infrared thermography allows these temperature differences to be
+          identified while equipment is operating and carrying load.
+        </p>
+
+        <p>
+          By comparing similar components, phases, terminations, and operating
+          conditions, thermography can help identify where additional
+          investigation is warranted before a condition progresses into
+          equipment damage or an outage.
+        </p>
+
+      </div>
+
+
+      <div
+        class="thermal-comparison"
+        aria-label="Visible and thermal electrical equipment comparison"
+      >
+
+        <div class="thermal-comparison__panel thermal-comparison__visible">
+            <span class="thermal-comparison__label">
+              Visible Image
+            </span>
+        </div>
+
+        <div class="thermal-comparison__panel thermal-comparison__ir">
+            <span class="thermal-comparison__label">
+              Thermal Image
+            </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EQUIPMENT -->
+  <section class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          ELECTRICAL EQUIPMENT
+        </p>
+
+        <h2>
+          What We Inspect
+        </h2>
+
+        <p>
+          ThermaVista provides thermal inspection across common commercial,
+          industrial, photovoltaic, and facility electrical systems.
+        </p>
+
+      </div>
+
+
+      <div class="equipment-grid">
+
+        <article class="equipment-card">
+          <h3>Switchgear</h3>
+          <p>
+            Bus connections, breaker connections, cable terminations,
+            protective devices, and accessible internal components.
+          </p>
+        </article>
+
+        <article class="equipment-card">
+          <h3>Panelboards</h3>
+          <p>
+            Branch breakers, feeder breakers, phase conductors, neutral
+            conductors, and termination points.
+          </p>
+        </article>
+
+        <article class="equipment-card">
+          <h3>Disconnects</h3>
+          <p>
+            Switch contacts, line and load connections, fuses, conductors,
+            and termination hardware.
+          </p>
+        </article>
+
+        <article class="equipment-card">
+          <h3>Transformers</h3>
+          <p>
+            Primary and secondary terminations, enclosure temperatures,
+            bushings, and connection points.
+          </p>
+        </article>
+
+        <article class="equipment-card">
+          <h3>Inverters</h3>
+          <p>
+            AC and DC connections, breakers, cable terminations,
+            internal connection points, and thermal distribution.
+          </p>
+        </article>
+
+        <article class="equipment-card">
+          <h3>Combiner Boxes</h3>
+          <p>
+            String connections, fuse holders, conductors, bus connections,
+            and outgoing feeder terminations.
+          </p>
+        </article>
+
+        <article class="equipment-card">
+          <h3>Cables &amp; Conductors</h3>
+          <p>
+            Accessible conductors, terminations, splices, taps, and
+            high-current connection points.
+          </p>
+        </article>
+
+        <article class="equipment-card">
+          <h3>Other Electrical Assets</h3>
+          <p>
+            Additional equipment may be evaluated where safe access,
+            operating conditions, and inspection objectives permit.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT WE DETECT -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          WHAT THERMOGRAPHY CAN REVEAL
+        </p>
+
+        <h2>
+          Abnormal Heat Can Point to Developing Electrical Conditions
+        </h2>
+
+        <p>
+          Thermography identifies unusual thermal behavior. Findings are
+          interpreted in context and typically require follow-up by qualified
+          electrical personnel to determine root cause.
+        </p>
+
+      </div>
+
+
+      <div class="finding-table-wrapper">
+
+        <table class="finding-table">
+
+          <thead>
+          <tr>
+            <th>Thermal Observation</th>
+            <th>Possible Condition</th>
+            <th>Why It Matters</th>
+            <th>Typical Follow-Up</th>
+          </tr>
+          </thead>
+
+          <tbody>
+
+          <tr>
+            <td>Single hot termination</td>
+            <td>
+              Increased resistance, loose connection, corrosion,
+              contamination, or contact degradation
+            </td>
+            <td>
+              Resistive heating can worsen under load and may damage
+              conductors or equipment
+            </td>
+            <td>
+              Qualified electrical inspection and torque/connection evaluation
+            </td>
+          </tr>
+
+          <tr>
+            <td>One phase hotter than adjacent phases</td>
+            <td>
+              Load imbalance, connection issue, conductor problem,
+              or abnormal resistance
+            </td>
+            <td>
+              Phase-to-phase comparison can reveal conditions that
+              absolute temperature alone may not identify
+            </td>
+            <td>
+              Load measurement and electrical testing
+            </td>
+          </tr>
+
+          <tr>
+            <td>Hot circuit breaker</td>
+            <td>
+              High load, internal contact condition, poor terminal connection,
+              or device deterioration
+            </td>
+            <td>
+              May indicate abnormal heating within or around the breaker
+            </td>
+            <td>
+              Load verification and breaker/termination evaluation
+            </td>
+          </tr>
+
+          <tr>
+            <td>Fuse or fuse-holder heating</td>
+            <td>
+              Poor contact, damaged fuse clip, overload,
+              or fuse deterioration
+            </td>
+            <td>
+              Localized heating can affect reliability and component life
+            </td>
+            <td>
+              Electrical inspection and component evaluation
+            </td>
+          </tr>
+
+          <tr>
+            <td>Hot bus connection</td>
+            <td>
+              Increased resistance at bolted joint or connection interface
+            </td>
+            <td>
+              High-current bus connections can generate substantial heat
+              when contact resistance increases
+            </td>
+            <td>
+              Qualified electrical inspection and corrective maintenance
+            </td>
+          </tr>
+
+          <tr>
+            <td>Transformer termination hotspot</td>
+            <td>
+              Loose or degraded primary/secondary connection
+            </td>
+            <td>
+              May indicate a developing high-resistance connection
+            </td>
+            <td>
+              Electrical investigation and testing
+            </td>
+          </tr>
+
+          <tr>
+            <td>Abnormal conductor heating</td>
+            <td>
+              Overload, undersized conductor, poor connection,
+              harmonic loading, or imbalance
+            </td>
+            <td>
+              Elevated conductor temperature can accelerate insulation aging
+            </td>
+            <td>
+              Load analysis and conductor/circuit evaluation
+            </td>
+          </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <p
+        style="
+            margin-top: 1rem;
+            color: var(--color-text-soft);
+            font-size: 0.88rem;
+          "
+      >
+        Thermography identifies temperature patterns and abnormal conditions.
+        It does not, by itself, prove a specific electrical root cause.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- DELTA T -->
+  <section class="section section-alt">
+
+    <div class="container delta-t-grid">
+
+      <aside class="delta-t-box">
+
+        <div class="delta-symbol">
+          ΔT
+        </div>
+
+        <h3>
+          Temperature Difference
+        </h3>
+
+        <p>
+          The difference between the temperature of a component and an
+          appropriate reference point can provide useful information about
+          abnormal electrical heating.
+        </p>
+
+      </aside>
+
+
+      <div class="delta-t-copy">
+
+        <p class="eyebrow">
+          WHY COMPARISON MATTERS
+        </p>
+
+        <h2>
+          Absolute Temperature Is Only Part of the Story
+        </h2>
+
+        <p>
+          Electrical thermography is often based on comparison rather than
+          looking at a single temperature reading in isolation.
+        </p>
+
+        <p>
+          Useful comparisons may include:
+        </p>
+
+        <ul>
+          <li>
+            Phase-to-phase temperature differences
+          </li>
+
+          <li>
+            Similar breakers carrying comparable loads
+          </li>
+
+          <li>
+            Adjacent terminations
+          </li>
+
+          <li>
+            Similar equipment operating under similar conditions
+          </li>
+
+          <li>
+            Component temperature relative to ambient conditions
+          </li>
+        </ul>
+
+        <p>
+          Load, emissivity, reflected temperature, equipment type,
+          accessibility, viewing angle, and environmental conditions all
+          affect interpretation.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- METHODOLOGY -->
+  <section
+    id="inspection-process"
+    class="section section-dark"
+  >
+
+    <div class="container">
+
+      <div class="section-heading section-heading-light">
+
+        <p class="eyebrow">
+          INSPECTION METHODOLOGY
+        </p>
+
+        <h2>
+          Thermal Inspection Is a Measurement Process, Not Just Photography
+        </h2>
+
+        <p>
+          Reliable findings require suitable operating conditions,
+          appropriate access, correct camera setup, and disciplined analysis.
+        </p>
+
+      </div>
+
+
+      <div class="methodology-grid">
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">1</div>
+
+          <h3>
+            Define the Scope
+          </h3>
+
+          <p>
+            Review equipment schedules, one-line diagrams, access requirements,
+            inspection objectives, and operating constraints.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">2</div>
+
+          <h3>
+            Verify Equipment Operation
+          </h3>
+
+          <p>
+            Thermography is most informative when electrical equipment is
+            operating under meaningful and representative load.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">3</div>
+
+          <h3>
+            Acquire Thermal Data
+          </h3>
+
+          <p>
+            Capture radiometric thermal imagery using appropriate viewing
+            angles and measurement parameters.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">4</div>
+
+          <h3>
+            Capture Visible Context
+          </h3>
+
+          <p>
+            Corresponding visible images help identify the exact component,
+            equipment position, and physical condition.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">5</div>
+
+          <h3>
+            Compare and Analyze
+          </h3>
+
+          <p>
+            Evaluate temperature differences, patterns, loading,
+            similar components, and operating context.
+          </p>
+
+        </article>
+
+
+        <article class="methodology-card">
+
+          <div class="methodology-number">6</div>
+
+          <h3>
+            Document Findings
+          </h3>
+
+          <p>
+            Record equipment identification, location, thermal evidence,
+            observations, priority, and recommended follow-up.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SEVERITY -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          FINDING PRIORITIZATION
+        </p>
+
+        <h2>
+          Help Maintenance Teams Decide What Deserves Attention First
+        </h2>
+
+        <p>
+          ThermaVista findings can be organized using a practical priority
+          system that separates immediate concerns from conditions that
+          should be monitored over time.
+        </p>
+
+      </div>
+
+
+      <div class="severity-grid">
+
+        <article class="severity-card">
+          <strong>P1 — Critical</strong>
+          <span>
+              Immediate evaluation recommended.
+            </span>
+        </article>
+
+        <article class="severity-card">
+          <strong>P2 — High</strong>
+          <span>
+              Prompt investigation or corrective action recommended.
+            </span>
+        </article>
+
+        <article class="severity-card">
+          <strong>P3 — Moderate</strong>
+          <span>
+              Schedule evaluation or maintenance.
+            </span>
+        </article>
+
+        <article class="severity-card">
+          <strong>P4 — Monitor</strong>
+          <span>
+              Track condition during subsequent inspections.
+            </span>
+        </article>
+
+        <article class="severity-card">
+          <strong>Observation</strong>
+          <span>
+              Documented condition with no immediate action indicated.
+            </span>
+        </article>
+
+      </div>
+
+
+      <p
+        style="
+            margin-top: 1rem;
+            color: var(--color-text-soft);
+            font-size: 0.88rem;
+          "
+      >
+        Priority categories shown above are a ThermaVista reporting framework
+        and should not be represented as ANSI/NETA-defined classifications
+        unless a specific standard or project specification requires them.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- NETA STANDARDS -->
+  <section class="section section-alt">
+
+    <div class="container standards-feature">
+
+      <aside class="standard-callout">
+
+          <span class="standard-code">
+            ANSI/NETA
+          </span>
+
+        <h3>
+          Commissioning, Acceptance &amp; Maintenance
+        </h3>
+
+        <p>
+          ThermaVista uses inspection practices informed by applicable
+          ANSI/NETA guidance when supporting commissioning, acceptance,
+          and maintenance programs for electrical systems.
+        </p>
+
+      </aside>
+
+
+      <div class="standards-detail">
+
+        <p class="eyebrow">
+          STANDARDS-ALIGNED INSPECTIONS
+        </p>
+
+        <h2>
+          Matching the Inspection to the Asset Lifecycle
+        </h2>
+
+        <p>
+          Different ANSI/NETA standards apply to different stages of an
+          electrical system's lifecycle.
+        </p>
+
+        <ul>
+
+          <li>
+            <strong>ANSI/NETA ECS</strong> —
+            <strong>commissioning</strong> of newly installed or retrofitted systems
+          </li>
+
+          <li>
+            <strong>ANSI/NETA ATS</strong> —
+            <strong>acceptance testing</strong> and inspection before final acceptance
+          </li>
+
+          <li>
+            <strong>ANSI/NETA MTS</strong> —
+            <strong>maintenance testing</strong> and condition assessment of systems in service
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          INSPECTION WORKFLOW
+        </p>
+
+        <h2>
+          From Equipment Access to Actionable Findings
+        </h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <article class="process-step">
+          <span class="step-number">1</span>
+          <h3>Plan</h3>
+          <p>
+            Review equipment lists, drawings, operating requirements,
+            and access constraints.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">2</span>
+          <h3>Prepare</h3>
+          <p>
+            Coordinate access, safety requirements, and operating conditions.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">3</span>
+          <h3>Inspect</h3>
+          <p>
+            Capture thermal and visible imagery of accessible components.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">4</span>
+          <h3>Analyze</h3>
+          <p>
+            Compare temperatures, similar components, phases, and loads.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">5</span>
+          <h3>Report</h3>
+          <p>
+            Document location, equipment, findings, imagery, and priority.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <span class="step-number">6</span>
+          <h3>Follow Up</h3>
+          <p>
+            Support maintenance teams with targeted information for further
+            investigation.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REPORTING -->
+  <section class="section section-alt">
+
+    <div class="container report-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          INSPECTION REPORTING
+        </p>
+
+        <h2
+          style="
+              margin-top: 0.4rem;
+              color: var(--color-navy);
+              font-size: clamp(2rem, 3vw, 3rem);
+            "
+        >
+          Every Finding Should Tell the Maintenance Team What to Look At
+        </h2>
+
+        <p style="color: var(--color-text-soft);">
+          A useful thermal report should make it possible for another
+          technician to locate the exact equipment, understand the observed
+          condition, and determine the appropriate next step.
+        </p>
+
+        <ul class="check-list">
+
+          <li>
+            Equipment identification
+          </li>
+
+          <li>
+            Building or electrical-room location
+          </li>
+
+          <li>
+            Thermal and visible-light images
+          </li>
+
+          <li>
+            Maximum and reference temperatures
+          </li>
+
+          <li>
+            Temperature differential observations
+          </li>
+
+          <li>
+            Thermal pattern description
+          </li>
+
+          <li>
+            Finding priority
+          </li>
+
+          <li>
+            Recommended follow-up
+          </li>
+
+          <li>
+            Summary findings table
+          </li>
+
+          <li>
+            Baseline documentation for future inspections
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="report-example">
+
+        <div class="report-header">
+
+          <strong>
+            TH-012 — Inverter AC Termination Heating
+          </strong>
+
+          <span>
+              Example electrical thermography finding
+            </span>
+
+        </div>
+
+
+        <div class="report-images">
+
+          <div class="report-image report-visible"></div>
+
+          <div class="report-image report-thermal"></div>
+
+        </div>
+
+
+        <div class="report-body">
+
+          <div class="report-row">
+            <span>Equipment</span>
+            <strong>Inverter AC Output</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Component</span>
+            <strong>L2 Termination</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Maximum Temperature</span>
+            <strong>55.9°C</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Reference Temperature</span>
+            <strong>43.1°C</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Example ΔT</span>
+            <strong>12.8°C</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Priority</span>
+            <strong>P2 — Investigate</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Recommended Action</span>
+            <strong>Qualified electrical evaluation</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VALUE -->
+  <section class="section section-dark">
+
+    <div class="container">
+
+      <div class="section-heading section-heading-light">
+
+        <p class="eyebrow">
+          THE BUSINESS VALUE
+        </p>
+
+        <h2>
+          Find Developing Problems While They Are Still Manageable
+        </h2>
+
+      </div>
+
+
+      <div class="card-grid three-up">
+
+        <article class="standard-card">
+          <h3>Reduce Unplanned Downtime</h3>
+          <p>
+            Identify abnormal conditions before they develop into equipment
+            failures or service interruptions.
+          </p>
+        </article>
+
+        <article class="standard-card">
+          <h3>Prioritize Maintenance</h3>
+          <p>
+            Direct maintenance teams toward specific components instead of
+            treating every asset as equally urgent.
+          </p>
+        </article>
+
+        <article class="standard-card">
+          <h3>Support Commissioning</h3>
+          <p>
+            Identify abnormal heating in new installations once equipment is
+            energized and carrying load.
+          </p>
+        </article>
+
+        <article class="standard-card">
+          <h3>Improve Troubleshooting</h3>
+          <p>
+            Thermal patterns can quickly narrow the search area for
+            electrical technicians.
+          </p>
+        </article>
+
+        <article class="standard-card">
+          <h3>Create Baseline Data</h3>
+          <p>
+            Establish an initial thermal condition that can be compared
+            against later inspections.
+          </p>
+        </article>
+
+        <article class="standard-card">
+          <h3>Track Deterioration</h3>
+          <p>
+            Periodic inspections help reveal whether a previously documented
+            condition is stable or worsening.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICE AREA -->
+  <section class="section section-alt">
+
+    <div class="container service-area-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          SOUTHERN CALIFORNIA
+        </p>
+
+        <h2
+          style="
+              color: var(--color-navy);
+              font-size: clamp(2rem, 3vw, 3rem);
+              margin-top: 0.4rem;
+            "
+        >
+          Electrical Thermography Across Southern California
+        </h2>
+
+        <p style="color: var(--color-text-soft);">
+          ThermaVista is based in North County and provides commercial
+          electrical thermography throughout:
+        </p>
+
+        <ul class="check-list">
+
+          <li>San Diego County</li>
+          <li>Orange County</li>
+          <li>Riverside County</li>
+
+        </ul>
+
+        <p style="color: var(--color-text-soft);">
+          Typical clients include commercial facilities, industrial sites,
+          solar installations, schools, municipalities, property owners,
+          EPC contractors, O&amp;M providers, and commissioning teams.
+        </p>
+
+      </div>
+
+
+      <div class="map-card">
+        <div class="map-placeholder">
+          <img src="./img/semi-transparent-map.png" alt="Southern California, San Diego County, Orange County, Riverside County"/>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          FREQUENTLY ASKED QUESTIONS
+        </p>
+
+        <h2>
+          Electrical Thermography FAQ
+        </h2>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+
+          <summary>
+            Does the equipment need to be energized during inspection?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              Generally, yes. Electrical thermography is most useful when
+              equipment is operating under representative load because
+              current flow is what produces the heating associated with many
+              electrical abnormalities.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can thermography prove that a connection is loose?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              Not by itself. Thermography can identify a thermal pattern
+              consistent with increased resistance or an abnormal connection,
+              but mechanical or electrical evaluation is typically required
+              to confirm the root cause.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can switchgear be inspected while energized?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              Inspection depends on safe access, equipment design,
+              electrical-safety requirements, site procedures, and the
+              inspection scope. Open-panel or energized-equipment inspection
+              must be coordinated with qualified personnel and the applicable
+              electrical safety program.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How often should electrical equipment be thermally inspected?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              Frequency depends on equipment criticality, loading,
+              environment, maintenance history, owner requirements, and
+              applicable maintenance programs. Higher-consequence equipment
+              may justify more frequent condition monitoring.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Is thermography only useful for old equipment?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              No. New equipment can exhibit installation-related problems,
+              poor connections, load imbalance, or component defects.
+              Thermography can therefore be useful during commissioning as
+              well as throughout the maintenance lifecycle.
+            </p>
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What does ThermaVista provide after the inspection?
+          </summary>
+
+          <div class="faq-answer">
+            <p>
+              Typical deliverables include thermal and visible imagery,
+              equipment identification, temperatures, temperature
+              differences, finding descriptions, priorities, and recommended
+              follow-up.
+            </p>
+          </div>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section
+    id="contact"
+    class="section bottom-cta"
+  >
+
+    <div class="container bottom-cta-grid">
+
+      <div>
+
+        <p class="eyebrow">
+          REQUEST AN INSPECTION
+        </p>
+
+        <h2>
+          Find the Heat Before It Becomes the Failure.
+        </h2>
+
+        <p>
+          Contact ThermaVista for commissioning, maintenance, or targeted
+          electrical thermography throughout San Diego, Orange, and
+          Riverside Counties.
+        </p>
+
+      </div>
+
+      <a
+        href="#contact"
+        class="btn btn-primary contact-btn"
+      >
+        Request an Inspection
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Popup Modal Overlay -->
+  <div id="contactModal" class="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="contact-modal__backdrop" data-close-modal></div>
+
+    <div class="contact-modal__dialog">
+      <button type="button" class="contact-modal__close" aria-label="Close contact form" data-close-modal>×</button>
+
+      <h2 id="contactModalTitle">Contact Us</h2>
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="d277d345-957e-4268-8b7b-366514b97cec"/>
+        <input type="hidden" name="subject" value="New ThermaVista Website Contact"/>
+        <input type="hidden" name="from_name" value="ThermaVista Website"/>
+
+
+        <div class="contact-honeypot" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="botcheck" type="text" tabindex="-1" autocomplete="off"/>
+        </div>
+        <div>
+          <label for="contactName">Name</label>
+          <input id="contactName" name="name" type="text" required/>
+        </div>
+
+        <div>
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" name="email" type="email" required/>
+        </div>
+
+        <div>
+          <label for="contactPhone">Phone</label>
+          <input id="contactPhone" name="phone" type="tel"/>
+        </div>
+
+        <div>
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="5" required ></textarea>
+        </div>
+
+        <div id="contactStatus" aria-live="polite"></div>
+
+        <button id="contactSubmitButton" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>ThermaVista</h3>
+      <p>
+        Thermal drone inspections and infrared thermography for solar PV and
+        electrical systems across Southern California.
+      </p>
+    </div>
+
+    <div>
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="./solar-pv-thermal-inspections.html">Solar PV Thermal Inspections</a></li>
+        <li><a href="./electrical-thermography.html">Electrical Thermography</a></li>
+        <li><a href="./commissioning-inspections.html">Commissioning Inspections</a></li>
+        <li><a href="./preventive-maintenance.html">Preventive Maintenance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Service Area</h4>
+      <ul class="footer-links">
+        <li>North County</li>
+        <li>San Diego County</li>
+        <li>Orange County</li>
+        <li>Riverside County</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+17607607220">(760) 760-7220</a></li>
+        <li><a href="mailto:sales@thermavista.com">sales@thermavista.com</a></li>
+        <li>Mon–Fri | 8:00 AM – 5:00 PM</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 ThermaVista. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="./js/app.js"></script>
+
+</body>
+</html>
